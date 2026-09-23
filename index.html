@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dott. Elena Valenti | Psicologa e Psicoterapeuta</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            sage: '#4A7C59',      /* Verde Salvia Rilassante */
+                            mint: '#88B04B',      /* Verde Menta Positivo */
+                            honey: '#E2A745',     /* Giallo Miele Accogliente */
+                            mustard: '#F2C94C',   /* Giallo Solare Attivante */
+                            cream: '#FAF8F5',     /* Bianco Crema di Sfondo */
+                            softwhite: '#FFFFFF', /* Bianco Puro */
+                            dark: '#2C3E50',      /* Antracite Leggibile */
+                            muted: '#5A6B7C'      /* Grigio Testo Mite */
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .custom-shadow {
+            box-shadow: 0 10px 30px -5px rgba(74, 124, 89, 0.08);
+        }
+        .hero-bg {
+            background: linear-gradient(135deg, #FAF8F5 0%, #F3F7F4 100%);
+        }
+        .card-transition {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-transition:hover {
+            transform: translateY(-4px);
+        }
+    </style>
+</head>
+<body class="bg-brand-cream text-brand-dark font-sans antialiased selection:bg-brand-honey/30">
+
+    <!-- Header / Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-brand-softwhite/90 backdrop-blur-md border-b border-brand-sage/10 transition-all duration-300 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-full bg-brand-sage flex items-center justify-center text-white font-serif text-xl font-bold shadow-sm group-hover:scale-105 transition-transform">
+                        EV
+                    </div>
+                    <div>
+                        <span class="block font-serif text-xl font-semibold text-brand-dark leading-tight">Dott.ssa Elena Valenti</span>
+                        <span class="block text-xs text-brand-sage font-medium tracking-wide">Psicologa &amp; Psicoterapeuta</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center space-x-8 font-medium text-sm text-brand-dark/80">
+                    <a href="#chi-sono" class="hover:text-brand-sage transition-colors">Chi Sono</a>
+                    <a href="#approccio" class="hover:text-brand-sage transition-colors">Metodo</a>
+                    <a href="#servizi" class="hover:text-brand-sage transition-colors">Aree d'Intervento</a>
+                    <a href="#palette" class="hover:text-brand-sage transition-colors">Colori &amp; Mood</a>
+                    <a href="#faq" class="hover:text-brand-sage transition-colors">Domande Frequenti</a>
+                </nav>
+
+                <!-- CTA Button Header -->
+                <div class="hidden sm:flex items-center">
+                    <a href="#contatti" class="inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-brand-sage text-white font-medium text-sm hover:bg-brand-sage/90 shadow-sm hover:shadow-md transition-all">
+                        <i class="fa-regular font-normal fa-calendar-check mr-2"></i> Prenota un Colloquio
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="flex md:hidden">
+                    <button id="mobile-menu-btn" type="button" class="p-2 rounded-md text-brand-dark hover:text-brand-sage focus:outline-none" aria-label="Menu">
+                        <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-softwhite border-b border-brand-sage/10 px-4 pt-2 pb-6 space-y-3">
+            <a href="#chi-sono" class="block px-3 py-2 rounded-lg text-base font-medium text-brand-dark hover:bg-brand-cream hover:text-brand-sage">Chi Sono</a>
+            <a href="#approccio" class="block px-3 py-2 rounded-lg text-base font-medium text-brand-dark hover:bg-brand-cream hover:text-brand-sage">Metodo</a>
+            <a href="#servizi" class="block px-3 py-2 rounded-lg text-base font-medium text-brand-dark hover:bg-brand-cream hover:text-brand-sage">Aree d'Intervento</a>
+            <a href="#palette" class="block px-3 py-2 rounded-lg text-base font-medium text-brand-dark hover:bg-brand-cream hover:text-brand-sage">Colori &amp; Mood</a>
+            <a href="#faq" class="block px-3 py-2 rounded-lg text-base font-medium text-brand-dark hover:bg-brand-cream hover:text-brand-sage">Domande Frequenti</a>
+            <a href="#contatti" class="block w-full text-center px-4 py-3 rounded-xl bg-brand-sage text-white font-medium shadow">Prenota un Colloquio</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden hero-bg py-16 lg:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Text Content -->
+                <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-honey/15 border border-brand-honey/30 text-brand-dark text-xs font-semibold tracking-wide uppercase">
+                        <span class="w-2 h-2 rounded-full bg-brand-honey animate-pulse"></span>
+                        Spazio di Ascolto Protetto &amp; Accogliente
+                    </div>
+                    <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-brand-dark leading-[1.15]">
+                        Ritrova il tuo equilibrio emotivo e <span class="text-brand-sage underline decoration-brand-honey/60 decoration-wavy decoration-2">coltiva la tua serenità</span>.
+                    </h1>
+                    <p class="text-lg sm:text-xl text-brand-muted max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                        Un percorso terapeutico personalizzato guidato dall'empatia e dalla professionalità per superare ansia, stress e momenti di cambiamento con nuova energia e consapevolezza.
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="#contatti" class="w-full sm:w-auto px-8 py-4 rounded-full bg-brand-sage text-white font-semibold text-base hover:bg-brand-sage/90 shadow-lg shadow-brand-sage/20 hover:shadow-xl transition-all text-center">
+                            Prenota Primo Colloquio
+                        </a>
+                        <a href="#approccio" class="w-full sm:w-auto px-8 py-4 rounded-full bg-brand-softwhite border border-brand-sage/20 text-brand-dark font-semibold text-base hover:bg-brand-cream transition-all text-center">
+                            Scopri il mio Approccio
+                        </a>
+                    </div>
+                    
+                    <!-- Trust badges -->
+                    <div class="pt-6 border-t border-brand-sage/10 grid grid-cols-3 gap-4 text-center lg:text-left">
+                        <div>
+                            <p class="font-serif font-bold text-2xl text-brand-sage">10+</p>
+                            <p class="text-xs text-brand-muted">Anni di Esperienza</p>
+                        </div>
+                        <div>
+                            <p class="font-serif font-bold text-2xl text-brand-sage">100%</p>
+                            <p class="text-xs text-brand-muted">Privacy &amp; Riservatezza</p>
+                        </div>
+                        <div>
+                            <p class="font-serif font-bold text-2xl text-brand-sage">Online/Studio</p>
+                            <p class="text-xs text-brand-muted">Modalità Flessibili</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Image Illustration -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <!-- Decorative background blob -->
+                        <div class="absolute -top-6 -bottom-6 -left-6 -right-6 bg-gradient-to-tr from-brand-sage/20 via-brand-honey/20 to-transparent rounded-3xl transform rotate-2 blur-lg"></div>
+                        
+                        <div class="relative bg-brand-softwhite p-4 rounded-3xl shadow-xl border border-brand-sage/10">
+                            <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80" 
+                                 alt="Dott.ssa Elena Valenti - Psicologa" 
+                                 class="w-full h-[420px] object-cover rounded-2xl"
+                                 onerror="this.src='https://placehold.co/800x800/4A7C59/FFFFFF?text=Dott.ssa+Elena+Valenti'">
+                            
+                            <!-- Floating Badge -->
+                            <div class="absolute -bottom-5 -left-5 bg-brand-softwhite p-4 rounded-2xl shadow-lg border border-brand-sage/10 flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-brand-mustard/20 flex items-center justify-center text-brand-honey text-xl">
+                                    <i class="fa-solid fa-sun"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-brand-muted font-medium">Ambiente Caldo</p>
+                                    <p class="text-sm font-bold text-brand-dark">Ascolto Attivo &amp; Senza Giudizio</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Palette & Mood Visualizer -->
+    <section id="palette" class="py-16 bg-brand-softwhite border-y border-brand-sage/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-brand-sage font-semibold text-sm tracking-wider uppercase">L'Armonia dei Colori in Psicologia</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-dark mt-2">La Palette del Benessere Emotivo</h2>
+                <p class="text-brand-muted mt-3">
+                    I colori di questo spazio web non sono casuali: combinano la <strong>calma distensiva del verde</strong> con la <strong>vitalità positiva del giallo</strong> e la <strong>chiarezza del bianco</strong>.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <!-- Color Palette Cards -->
+                <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <!-- Verde Salvia Card -->
+                    <div id="card-green" class="p-5 rounded-2xl border border-brand-sage/20 bg-brand-cream/50 cursor-pointer transition-all hover:shadow-md" onclick="selectColor('green')">
+                        <div class="w-full h-16 rounded-xl bg-brand-sage mb-4 flex items-center justify-center text-white font-mono text-xs">
+                            #4A7C59
+                        </div>
+                        <h3 class="font-bold text-brand-dark text-lg flex items-center gap-2">
+                            <i class="fa-solid fa-leaf text-brand-sage"></i> Verde Salvia
+                        </h3>
+                        <p class="text-xs text-brand-muted mt-2">
+                            <strong>Effetto Rilassante:</strong> Evoca la natura, riduce lo stress visivo, trasmette stabilità e sicurezza clinica.
+                        </p>
+                    </div>
+
+                    <!-- Giallo Miele Card -->
+                    <div id="card-yellow" class="p-5 rounded-2xl border border-brand-honey/20 bg-brand-cream/50 cursor-pointer transition-all hover:shadow-md" onclick="selectColor('yellow')">
+                        <div class="w-full h-16 rounded-xl bg-brand-honey mb-4 flex items-center justify-center text-white font-mono text-xs">
+                            #E2A745
+                        </div>
+                        <h3 class="font-bold text-brand-dark text-lg flex items-center gap-2">
+                            <i class="fa-solid fa-sun text-brand-honey"></i> Giallo Miele
+                        </h3>
+                        <p class="text-xs text-brand-muted mt-2">
+                            <strong>Effetto Attivante:</strong> Stimola l'ottimismo, la speranza e l'energia necessaria al cambiamento personale.
+                        </p>
+                    </div>
+
+                    <!-- Bianco Crema Card -->
+                    <div id="card-cream" class="p-5 rounded-2xl border border-gray-200 bg-brand-cream/50 cursor-pointer transition-all hover:shadow-md" onclick="selectColor('cream')">
+                        <div class="w-full h-16 rounded-xl bg-brand-cream border border-gray-200 mb-4 flex items-center justify-center text-brand-dark font-mono text-xs">
+                            #FAF8F5
+                        </div>
+                        <h3 class="font-bold text-brand-dark text-lg flex items-center gap-2">
+                            <i class="fa-solid fa-feather-pointed text-gray-400"></i> Bianco Crema
+                        </h3>
+                        <p class="text-xs text-brand-muted mt-2">
+                            <strong>Effetto Neutro:</strong> Offre respiro, pulizia mentale e uno spazio privo di sovraccarichi sensoriali.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Live Dynamic Preview Panel -->
+                <div class="lg:col-span-5">
+                    <div id="palette-preview" class="p-6 rounded-3xl bg-brand-cream border border-brand-sage/20 shadow-md transition-all duration-500">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-semibold uppercase tracking-wider text-brand-sage">Anteprima Dinamica</span>
+                            <span id="preview-tag" class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-brand-sage text-white">Equilibrio Perfetto</span>
+                        </div>
+                        <div class="p-5 rounded-2xl bg-white shadow-sm border border-gray-100">
+                            <h4 id="preview-title" class="font-serif font-bold text-xl text-brand-dark">Un'esperienza di ascolto e crescita</h4>
+                            <p id="preview-desc" class="text-sm text-brand-muted mt-2">
+                                Clicca sulle schede a sinistra per osservare come l'integrazione di Verde, Giallo e Crema crea differenti sfumature emozionali.
+                            </p>
+                            <button id="preview-btn" class="mt-4 px-4 py-2 rounded-xl bg-brand-sage text-white text-xs font-semibold shadow hover:opacity-90 transition">
+                                Prova l'Interazione
+                            </button>
+                        </div>
+                        <p class="text-xs text-brand-muted mt-4 italic">
+                            <i class="fa-solid fa-circle-info mr-1 text-brand-sage"></i> Un'atmosfera visiva studiata per far sentire ogni paziente accudito e motivato fin dal primo sguardo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chi Sono / About Section -->
+    <section id="chi-sono" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Image Column -->
+                <div class="lg:col-span-5">
+                    <div class="relative">
+                        <div class="w-full h-[480px] rounded-3xl overflow-hidden shadow-xl border-4 border-brand-softwhite">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" 
+                                 alt="Dott.ssa Elena Valenti nello studio" 
+                                 class="w-full h-full object-cover"
+                                 onerror="this.src='https://placehold.co/800x1000/4A7C59/FFFFFF?text=Dott.ssa+Elena+Valenti'">
+                        </div>
+                        <!-- Quote Badge -->
+                        <div class="absolute -bottom-6 right-2 sm:-right-6 max-w-xs bg-brand-softwhite p-5 rounded-2xl shadow-lg border border-brand-sage/10">
+                            <p class="font-serif italic text-sm text-brand-dark">
+                                "Ogni difficoltà racchiude in sé il seme di una nuova consapevolezza."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text Content Column -->
+                <div class="lg:col-span-7 space-y-6">
+                    <span class="text-brand-sage font-semibold text-sm tracking-wider uppercase">Chi Sono</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-dark">Dott.ssa Elena Valenti</h2>
+                    <p class="text-brand-muted leading-relaxed">
+                        Sono Psicologa clinica e Psicoterapeuta iscritta all'Ordine degli Psicologi. Da oltre dieci anni accompagno adulti, giovani adulti e coppie nell'attraversare periodi di crisi, incertezza emotiva o cambiamento.
+                    </p>
+                    <p class="text-brand-muted leading-relaxed">
+                        Il mio lavoro si fonda sull'intreccio tra <strong>ascolto empatico</strong> e <strong>tecniche validate scientificamente</strong>. Credo fermamente che lo studio della psicologa sia prima di tutto un rifugio sicuro, privo di giudizio, dove riscoprire le proprie risorse personali.
+                    </p>
+
+                    <!-- Core Values Cards -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+                        <div class="p-4 rounded-xl bg-brand-softwhite border border-brand-sage/10 flex items-start gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-brand-sage/10 text-brand-sage flex items-center justify-center shrink-0 font-bold">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-sm text-brand-dark">Empatia &amp; Accoglienza</h4>
+                                <p class="text-xs text-brand-muted mt-1">Spazio protetto per esprimere liberamente ogni emozione.</p>
+                            </div>
+                        </div>
+
+                        <div class="p-4 rounded-xl bg-brand-softwhite border border-brand-sage/10 flex items-start gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-brand-honey/20 text-brand-dark flex items-center justify-center shrink-0 font-bold">
+                                <i class="fa-solid fa-compass"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-sm text-brand-dark">Percorsi Su Misura</h4>
+                                <p class="text-xs text-brand-muted mt-1">Obiettivi chiari concordati insieme in base alle tue esigenze.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section / Aree di Intervento -->
+    <section id="servizi" class="py-20 bg-brand-softwhite">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-sage font-semibold text-sm tracking-wider uppercase">Come Posso Aiutarti</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-dark mt-2">Aree di Intervento</h2>
+                <p class="text-brand-muted mt-3">
+                    Supporto psicologico specialistico per ritrovare serenità e benessere nelle diverse sfide della vita.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1: Ansia e Stress -->
+                <div class="bg-brand-cream/60 p-8 rounded-3xl border border-brand-sage/10 card-transition flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-brand-sage text-white flex items-center justify-center text-xl mb-6 shadow-sm">
+                            <i class="fa-solid fa-wind"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-brand-dark mb-3">Ansia, Attacchi di Panico &amp; Stress</h3>
+                        <p class="text-brand-muted text-sm leading-relaxed mb-6">
+                            Impara a gestire l'ansia generalizzata, le preoccupazioni invadenti, gli stati di tensione e il burnout lavorativo ritrovando la calma interiore.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-brand-muted space-y-2 border-t border-brand-sage/10 pt-4">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-sage"></i> Gestione dei sintomi fisici dell'ansia</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-sage"></i> Tecniche di rilassamento e mindfulness</li>
+                    </ul>
+                </div>
+
+                <!-- Card 2: Autostima e Crescita -->
+                <div class="bg-brand-cream/60 p-8 rounded-3xl border border-brand-honey/30 card-transition flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-brand-honey text-white text-[10px] font-bold uppercase px-3 py-1 rounded-bl-xl tracking-wider">
+                        Molto Richiesto
+                    </div>
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-brand-honey text-white flex items-center justify-center text-xl mb-6 shadow-sm">
+                            <i class="fa-solid fa-seedling"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-brand-dark mb-3">Autostima &amp; Crescita Personale</h3>
+                        <p class="text-brand-muted text-sm leading-relaxed mb-6">
+                            Sviluppa una maggiore fiducia nelle tue capacità, supera l'autocritica eccessiva e riscopri le tue potenzialità autentiche.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-brand-muted space-y-2 border-t border-brand-sage/10 pt-4">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-sage"></i> Superamento della sindrome dell'impostore</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-sage"></i> Assertività e comunicazione efficace</li>
+                    </ul>
+                </div>
+
+                <!-- Card 3: Relazioni ed Affetti -->
+                <div class="bg-brand-cream/60 p-8 rounded-3xl border border-brand-sage/10 card-transition flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-brand-sage text-white flex items-center justify-center text-xl mb-6 shadow-sm">
+                            <i class="fa-solid fa-people-arrows"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-brand-dark mb-3">Difficoltà Relazionali &amp; Coppia</h3>
+                        <p class="text-brand-muted text-sm leading-relaxed mb-6">
+                            Comprendi le dinamiche conflittuali nelle relazioni amorose, familiari o professionali per costruire legami più sani e appaganti.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-brand-muted space-y-2 border-t border-brand-sage/10 pt-4">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-sage"></i> Gestione delle separazioni e lutti</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-sage"></i> Definizione dei propri confini personali</li>
+                    </ul>
+                </div>
+
+                <!-- Card 4: Cambiamenti di Vita -->
+                <div class="bg-brand-cream/60 p-8 rounded-3xl border border-brand-sage/10 card-transition flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-brand-sage text-white flex items-center justify-center text-xl mb-6 shadow-sm">
+                            <i class="fa-solid fa-compass-drafting"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-brand-dark mb-3">Elaborazione dei Cambiamenti</h3>
+                        <p class="text-brand-muted text-sm leading-relaxed mb-6">
+                            Affronta transizioni importanti come un nuovo lavoro, un trasferimento, la fine di una storia o nuove fasi evolutive della vita.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-brand-muted space-y-2 border-t border-brand-sage/10 pt-4">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-sage"></i> Adattamento al cambiamento</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-sage"></i> Chiarificazione delle priorità</li>
+                    </ul>
+                </div>
+
+                <!-- Card 5: Consulenza Online -->
+                <div class="bg-brand-cream/60 p-8 rounded-3xl border border-brand-sage/10 card-transition flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-brand-sage text-white flex items-center justify-center text-xl mb-6 shadow-sm">
+                            <i class="fa-solid fa-laptop-medical"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-brand-dark mb-3">Supporto Psicologico Online</h3>
+                        <p class="text-brand-muted text-sm leading-relaxed mb-6">
+                            Colloqui a distanza tramite videochiamata sicura, ideale per chi viaggia spesso, vive all'estero o preferisce la comodità da casa.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-brand-muted space-y-2 border-t border-brand-sage/10 pt-4">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-sage"></i> Piattaforma conforme GDPR</li>
+                        <li class="flex items-center gap-2"><li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-sage"></i> Flessibilità di orari</li>
+                    </ul>
+                </div>
+
+                <!-- Card 6: Colloqui in Studio -->
+                <div class="bg-brand-cream/60 p-8 rounded-3xl border border-brand-sage/10 card-transition flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-brand-sage text-white flex items-center justify-center text-xl mb-6 shadow-sm">
+                            <i class="fa-solid fa-couch"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-brand-dark mb-3">Incontri Presenziali in Studio</h3>
+                        <p class="text-brand-muted text-sm leading-relaxed mb-6">
+                            Incontri di persona in uno studio accogliente, silenzioso e riservato, pensato per favorire la massima tranquillità.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-brand-muted space-y-2 border-t border-brand-sage/10 pt-4">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-sage"></i> Ambiente sanificato e riservato</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-sage"></i> Facile accesso e parcheggio</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Method & Approach Section -->
+    <section id="approccio" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-sage font-semibold text-sm tracking-wider uppercase">Il Percorso Terapeutico</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-dark mt-2">Come Funziona il Mio Metodo</h2>
+                <p class="text-brand-muted mt-3">
+                    Un processo strutturato ma flessibile, suddiviso in 4 tappe chiave per accompagnarti verso la tua serenità.
+                </p>
+            </div>
+
+            <!-- 4 Steps Process -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
+                <!-- Step 1 -->
+                <div class="bg-brand-softwhite p-6 rounded-2xl border border-brand-sage/10 relative shadow-sm">
+                    <span class="w-10 h-10 rounded-full bg-brand-cream border border-brand-sage/20 text-brand-sage font-bold flex items-center justify-center mb-4 text-base">01</span>
+                    <h3 class="font-bold text-lg text-brand-dark mb-2">1. Primo Colloquio</h3>
+                    <p class="text-xs text-brand-muted leading-relaxed">
+                        Incontro conoscitivo per ascoltare la tua storia, comprendere i tuoi bisogni attuali e valutare se il percorso fa al caso tuo.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-brand-softwhite p-6 rounded-2xl border border-brand-sage/10 relative shadow-sm">
+                    <span class="w-10 h-10 rounded-full bg-brand-cream border border-brand-sage/20 text-brand-sage font-bold flex items-center justify-center mb-4 text-base">02</span>
+                    <h3 class="font-bold text-lg text-brand-dark mb-2">2. Definizione Obiettivi</h3>
+                    <p class="text-xs text-brand-muted leading-relaxed">
+                        Definiamo insieme traguardi concreti e realistici, stabilendo la frequenza degli incontri in base alle tue esigenze.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-brand-softwhite p-6 rounded-2xl border border-brand-sage/10 relative shadow-sm">
+                    <span class="w-10 h-10 rounded-full bg-brand-cream border border-brand-sage/20 text-brand-sage font-bold flex items-center justify-center mb-4 text-base">03</span>
+                    <h3 class="font-bold text-lg text-brand-dark mb-2">3. Lavoro Attivo</h3>
+                    <p class="text-xs text-brand-muted leading-relaxed">
+                        Sessioni regolari con strumenti pratici, riflessioni guidate e strategie operative da applicare nella vita quotidiana.
+                    </p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="bg-brand-softwhite p-6 rounded-2xl border border-brand-sage/10 relative shadow-sm">
+                    <span class="w-10 h-10 rounded-full bg-brand-cream border border-brand-sage/20 text-brand-sage font-bold flex items-center justify-center mb-4 text-base">04</span>
+                    <h3 class="font-bold text-lg text-brand-dark mb-2">4. Autonomia &amp; Crescita</h3>
+                    <p class="text-xs text-brand-muted leading-relaxed">
+                        Verifica periodica dei risultati raggiunti, consolidamento delle risorse interne e raggiungimento della completa autonomia.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-16 bg-brand-softwhite border-t border-brand-sage/10">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-brand-sage font-semibold text-sm tracking-wider uppercase">Charezza &amp; Trasparenza</span>
+                <h2 class="font-serif text-3xl font-bold text-brand-dark mt-2">Domande Frequenti</h2>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="border border-brand-sage/15 rounded-2xl overflow-hidden bg-brand-cream/30">
+                    <button class="w-full text-left p-5 font-semibold text-brand-dark flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
+                        <span>Quanto dura un percorso psicologico?</span>
+                        <i class="fa-solid fa-chevron-down text-brand-sage transition-transform duration-300"></i>
+                    </button>
+                    <div class="hidden p-5 pt-0 text-sm text-brand-muted leading-relaxed border-t border-brand-sage/5">
+                        La durata varia in base agli obiettivi specifici e alla natura della problematica. Alcuni percorsi focalizzati durano pochi mesi, mentre altri richiedono un tempo più disteso. Tutto viene concordato apertamente fin dai primi colloqui.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="border border-brand-sage/15 rounded-2xl overflow-hidden bg-brand-cream/30">
+                    <button class="w-full text-left p-5 font-semibold text-brand-dark flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
+                        <span>Come funziona il primo colloquio conoscitivo?</span>
+                        <i class="fa-solid fa-chevron-down text-brand-sage transition-transform duration-300"></i>
+                    </button>
+                    <div class="hidden p-5 pt-0 text-sm text-brand-muted leading-relaxed border-t border-brand-sage/5">
+                        Il primo incontro serve a conoscerci: potrai raccontarmi i motivi che ti spingono a cercare supporto e porre tutte le domande che desideri sul funzionamento della terapia. È uno spazio senza impegno per capire se ci sentiamo in sintonia.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="border border-brand-sage/15 rounded-2xl overflow-hidden bg-brand-cream/30">
+                    <button class="w-full text-left p-5 font-semibold text-brand-dark flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
+                        <span>Le spese psicologiche sono detraibili?</span>
+                        <i class="fa-solid fa-chevron-down text-brand-sage transition-transform duration-300"></i>
+                    </button>
+                    <div class="hidden p-5 pt-0 text-sm text-brand-muted leading-relaxed border-t border-brand-sage/5">
+                        Sì, le prestazioni sanitarie erogate da psicologi e psicoterapeuti sono detraibili al 19% come spese sanitarie nella dichiarazione dei redditi, se pagate con metodi tracciabili (bonifico, carta o POS).
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form & Studio Location Section -->
+    <section id="contatti" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Contact Info Column -->
+                <div class="lg:col-span-5 space-y-8">
+                    <div>
+                        <span class="text-brand-sage font-semibold text-sm tracking-wider uppercase">Contatti &amp; Prenotazioni</span>
+                        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-dark mt-2">Fai il primo passo</h2>
+                        <p class="text-brand-muted mt-3 leading-relaxed">
+                            Compila il modulo o contattami direttamente via e-mail o telefono per richiedere informazioni o fissare un appuntamento.
+                        </p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <!-- Studio Address -->
+                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-brand-softwhite border border-brand-sage/10">
+                            <div class="w-10 h-10 rounded-xl bg-brand-sage/10 text-brand-sage flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-brand-dark">Studio di Psicologia</h4>
+                                <p class="text-xs text-brand-muted mt-1">Via XX Settembre, 45 - Milano (MI)</p>
+                                <p class="text-xs text-brand-sage font-medium mt-1">Metropolitana MM1 Conciliazione</p>
+                            </div>
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-brand-softwhite border border-brand-sage/10">
+                            <div class="w-10 h-10 rounded-xl bg-brand-sage/10 text-brand-sage flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-brand-dark">Telefono &amp; WhatsApp</h4>
+                                <p class="text-xs text-brand-muted mt-1">+39 340 123 4567</p>
+                                <p class="text-xs text-brand-muted">Lun - Ven: 09:00 - 19:30</p>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-brand-softwhite border border-brand-sage/10">
+                            <div class="w-10 h-10 rounded-xl bg-brand-sage/10 text-brand-sage flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-brand-dark">Email</h4>
+                                <p class="text-xs text-brand-muted mt-1">elena.valenti@psicologia.it</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map Preview Box -->
+                    <div class="p-4 bg-brand-softwhite rounded-2xl border border-brand-sage/10 text-center">
+                        <div class="w-full h-32 bg-slate-200 rounded-xl mb-3 flex items-center justify-center text-slate-400 text-xs font-medium relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=600&q=80" alt="Mappa Studio" class="w-full h-full object-cover opacity-60">
+                            <span class="absolute bg-brand-softwhite/90 px-3 py-1 rounded-full text-brand-dark font-semibold shadow-sm">
+                                <i class="fa-solid fa-map-pin text-brand-sage mr-1"></i> Milano, Via XX Settembre
+                            </span>
+                        </div>
+                        <p class="text-xs text-brand-muted">Ricevo su appuntamento sia in studio sia online.</p>
+                    </div>
+                </div>
+
+                <!-- Form Column -->
+                <div class="lg:col-span-7">
+                    <div class="bg-brand-softwhite p-8 rounded-3xl border border-brand-sage/10 shadow-lg relative">
+                        <h3 class="font-serif text-2xl font-bold text-brand-dark mb-2">Richiedi un Primo Colloquio</h3>
+                        <p class="text-xs text-brand-muted mb-6">Compila i campi sottostanti. Ti risponderò entro 24 ore lavorative.</p>
+
+                        <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-brand-dark mb-1">Nome e Cognome *</label>
+                                    <input type="text" required placeholder="Mario Rossi" class="w-full px-4 py-3 rounded-xl bg-brand-cream border border-brand-sage/20 text-sm focus:outline-none focus:ring-2 focus:ring-brand-sage">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-brand-dark mb-1">Email *</label>
+                                    <input type="email" required placeholder="mario.rossi@email.it" class="w-full px-4 py-3 rounded-xl bg-brand-cream border border-brand-sage/20 text-sm focus:outline-none focus:ring-2 focus:ring-brand-sage">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-brand-dark mb-1">Telefono</label>
+                                    <input type="tel" placeholder="+39 333 0000000" class="w-full px-4 py-3 rounded-xl bg-brand-cream border border-brand-sage/20 text-sm focus:outline-none focus:ring-2 focus:ring-brand-sage">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-brand-dark mb-1">Modalità Preferita</label>
+                                    <select class="w-full px-4 py-3 rounded-xl bg-brand-cream border border-brand-sage/20 text-sm focus:outline-none focus:ring-2 focus:ring-brand-sage">
+                                        <option value="studio">In Studio (Milano)</option>
+                                        <option value="online">Online (Videochiamata)</option>
+                                        <option value="indifferente">Indifferente</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-brand-dark mb-1">Messaggio / Motivo del contatto</label>
+                                <textarea rows="4" placeholder="Descrivi brevemente di cosa vorresti parlare..." class="w-full px-4 py-3 rounded-xl bg-brand-cream border border-brand-sage/20 text-sm focus:outline-none focus:ring-2 focus:ring-brand-sage"></textarea>
+                            </div>
+
+                            <div class="flex items-start gap-2">
+                                <input type="checkbox" id="privacy" required class="mt-1 rounded text-brand-sage focus:ring-brand-sage">
+                                <label for="privacy" class="text-xs text-brand-muted leading-tight">
+                                    Acconsento al trattamento dei dati personali ai sensi del Regolamento GDPR per l'evasione della presente richiesta.
+                                </label>
+                            </div>
+
+                            <button type="submit" class="w-full py-4 rounded-xl bg-brand-sage text-white font-semibold text-sm hover:bg-brand-sage/90 shadow-md transition-all flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-paper-plane"></i> Invia Richiesta
+                            </button>
+                        </form>
+
+                        <!-- Success Message Container -->
+                        <div id="form-success" class="hidden absolute inset-0 bg-brand-softwhite rounded-3xl p-8 flex flex-col items-center justify-center text-center">
+                            <div class="w-16 h-16 bg-brand-sage/10 text-brand-sage rounded-full flex items-center justify-center text-3xl mb-4">
+                                <i class="fa-solid fa-circle-check"></i>
+                            </div>
+                            <h4 class="font-serif text-2xl font-bold text-brand-dark">Messaggio Inviato!</h4>
+                            <p class="text-sm text-brand-muted mt-2 max-w-xs">
+                                Grazie per avermi contattata. Ti risponderò al più presto per confermare il nostro appuntamento.
+                            </p>
+                            <button onclick="resetForm()" class="mt-6 px-6 py-2 rounded-full bg-brand-cream text-brand-dark text-xs font-semibold hover:bg-gray-200">
+                                Invia un altro messaggio
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-white/80 py-12 border-t border-brand-sage/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div class="md:col-span-2">
+                    <span class="font-serif text-xl font-bold text-white block mb-2">Dott.ssa Elena Valenti</span>
+                    <p class="text-xs text-white/60 max-w-sm leading-relaxed">
+                        Psicologa e Psicoterapeuta iscritta all'Ordine degli Psicologi della Lombardia (N° 12345). Prestazioni sanitarie detraibili ai sensi di legge.
+                    </p>
+                </div>
+                <div>
+                    <h5 class="text-xs font-bold uppercase tracking-wider text-brand-mustard mb-3">Navigazione</h5>
+                    <ul class="text-xs space-y-2">
+                        <li><a href="#chi-sono" class="hover:text-white">Chi Sono</a></li>
+                        <li><a href="#approccio" class="hover:text-white">Il Mio Metodo</a></li>
+                        <li><a href="#servizi" class="hover:text-white">Servizi</a></li>
+                        <li><a href="#contatti" class="hover:text-white">Prenota</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-xs font-bold uppercase tracking-wider text-brand-mustard mb-3">Note Legali</h5>
+                    <ul class="text-xs space-y-2 text-white/60">
+                        <li>P.IVA 01234567890</li>
+                        <li>Codice Deontologico Psicologi</li>
+                        <li>Privacy &amp; Cookie Policy</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-white/10 text-center text-xs text-white/40">
+                &copy; 2026 Dott.ssa Elena Valenti - Tutti i diritti riservati.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile Navigation Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // FAQ Toggle Logic
+        function toggleFaq(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('i');
+            
+            content.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        }
+
+        // Color Palette Interactive Showcase
+        function selectColor(colorType) {
+            const previewPanel = document.getElementById('palette-preview');
+            const previewTag = document.getElementById('preview-tag');
+            const previewTitle = document.getElementById('preview-title');
+            const previewDesc = document.getElementById('preview-desc');
+            const previewBtn = document.getElementById('preview-btn');
+
+            if(colorType === 'green') {
+                previewPanel.className = "p-6 rounded-3xl bg-[#EAF2EC] border border-brand-sage/30 shadow-md transition-all duration-500";
+                previewTag.className = "px-2.5 py-0.5 rounded-full text-xs font-bold bg-brand-sage text-white";
+                previewTag.innerText = "Focus: Calma & Protezione";
+                previewTitle.innerText = "Sintonizzazione e Rilassamento";
+                previewDesc.innerText = "Il Verde Salvia riduce il battito cardiaco percepito e favorisce un senso immediato di accoglienza e sicurezza clinica.";
+                previewBtn.className = "mt-4 px-4 py-2 rounded-xl bg-brand-sage text-white text-xs font-semibold shadow hover:opacity-90 transition";
+            } else if(colorType === 'yellow') {
+                previewPanel.className = "p-6 rounded-3xl bg-[#FEF8EC] border border-brand-honey/40 shadow-md transition-all duration-500";
+                previewTag.className = "px-2.5 py-0.5 rounded-full text-xs font-bold bg-brand-honey text-white";
+                previewTag.innerText = "Focus: Energia & Rinnovamento";
+                previewTitle.innerText = "Attivazione e Motivazione";
+                previewDesc.innerText = "Il Giallo Miele/Senape stimola il pensiero positivo, la speranza nel futuro e la spinta propulsiva al cambiamento terapeutico.";
+                previewBtn.className = "mt-4 px-4 py-2 rounded-xl bg-brand-honey text-white text-xs font-semibold shadow hover:opacity-90 transition";
+            } else if(colorType === 'cream') {
+                previewPanel.className = "p-6 rounded-3xl bg-brand-cream border border-gray-200 shadow-md transition-all duration-500";
+                previewTag.className = "px-2.5 py-0.5 rounded-full text-xs font-bold bg-brand-dark text-white";
+                previewTag.innerText = "Focus: Chiarezza & Spazio";
+                previewTitle.innerText = "Pausa da Sovraccarichi Cognitive";
+                previewDesc.innerText = "I toni Caldi del Bianco Crema offrono respiro alla pagina web, rendendo la lettura piacevole e priva di affaticamento.";
+                previewBtn.className = "mt-4 px-4 py-2 rounded-xl bg-brand-dark text-white text-xs font-semibold shadow hover:opacity-90 transition";
+            }
+        }
+
+        // Contact Form Mock Submission
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            document.getElementById('form-success').classList.remove('hidden');
+        }
+
+        function resetForm() {
+            document.getElementById('contact-form').reset();
+            document.getElementById('form-success').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
