@@ -4,6 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dott. Angelo Lucio Silvino | Psicologo</title>
+    
+    <!-- Meta Tag SEO per Google -->
+    <meta name="description" content="Sito ufficiale del Dott. Angelo Lucio Silvino, Psicologo. Percorsi di supporto psicologico e consulenza per ansia, stress e benessere emotivo.">
+    <meta name="keywords" content="Angelo Lucio Silvino, Psicologo, Psicologia, Consulenza Psicologica, Supporto Emotivo">
+    <meta name="author" content="Dott. Angelo Lucio Silvino">
+
+    <!-- Open Graph / LinkedIn Preview -->
+    <meta property="og:title" content="Dott. Angelo Lucio Silvino | Psicologo">
+    <meta property="og:description" content="Spazio di ascolto protetto e percorsi di supporto psicologico personalizzati.">
+    <meta property="og:url" content="https://www.linkedin.com/in/angelo-lucio-silvino/">
+    <meta property="og:type" content="website">
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts -->
@@ -19,14 +31,14 @@
                 extend: {
                     colors: {
                         brand: {
-                            sage: '#4A7C59',      /* Verde Salvia Rilassante */
-                            mint: '#88B04B',      /* Verde Menta Positivo */
-                            honey: '#E2A745',     /* Giallo Miele Accogliente */
-                            mustard: '#F2C94C',   /* Giallo Solare Attivante */
-                            cream: '#FAF8F5',     /* Bianco Crema di Sfondo */
-                            softwhite: '#FFFFFF', /* Bianco Puro */
-                            dark: '#2C3E50',      /* Antracite Leggibile */
-                            muted: '#5A6B7C'      /* Grigio Testo Mite */
+                            sage: '#4A7C59',      /* Verde Salvia */
+                            mint: '#88B04B',      
+                            honey: '#E2A745',     /* Giallo Miele */
+                            mustard: '#F2C94C',   
+                            cream: '#FAF8F5',     /* Sfondo Crema */
+                            softwhite: '#FFFFFF', 
+                            dark: '#2C3E50',      
+                            muted: '#5A6B7C'      
                         }
                     },
                     fontFamily: {
@@ -58,13 +70,11 @@
     <header class="sticky top-0 z-50 bg-brand-softwhite/90 backdrop-blur-md border-b border-brand-sage/10 transition-all duration-300 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
-                <!-- Logo con Iniziali ALS -->
+                <!-- Logo Personale -->
                 <a href="#" class="flex items-center gap-3 group">
-                    <div class="w-10 h-10 rounded-full bg-brand-sage flex items-center justify-center text-white font-serif text-sm font-bold shadow-sm group-hover:scale-105 transition-transform tracking-wider">
-                        ALS
-                    </div>
-                    <div>
-                        <span class="block font-serif text-xl font-semibold text-brand-dark leading-tight">Dott. Angelo Lucio Silvino</span>
+                    <img src="logo.png" alt="Logo Dott. Angelo Lucio Silvino" class="h-12 w-auto object-contain transition-transform group-hover:scale-105" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'w-10 h-10 rounded-full bg-brand-sage flex items-center justify-center text-white font-serif text-sm font-bold shadow-sm\'>ALS</div><div><span class=\'block font-serif text-xl font-semibold text-brand-dark leading-tight\'>Dott. Angelo Lucio Silvino</span><span class=\'block text-xs text-brand-sage font-medium tracking-wide\'>Psicologo</span></div>';">
+                    <div class="hidden sm:block">
+                        <span class="block font-serif text-lg font-semibold text-brand-dark leading-tight">Dott. Angelo Lucio Silvino</span>
                         <span class="block text-xs text-brand-sage font-medium tracking-wide">Psicologo</span>
                     </div>
                 </a>
@@ -75,7 +85,11 @@
                     <a href="#approccio" class="hover:text-brand-sage transition-colors">Metodo</a>
                     <a href="#servizi" class="hover:text-brand-sage transition-colors">Aree d'Intervento</a>
                     <a href="#palette" class="hover:text-brand-sage transition-colors">Colori &amp; Mood</a>
-                    <a href="#faq" class="hover:text-brand-sage transition-colors">Domande Frequenti</a>
+                    <a href="#faq" class="hover:text-brand-sage transition-colors">FAQ</a>
+                    <!-- Link LinkedIn Header -->
+                    <a href="https://www.linkedin.com/in/angelo-lucio-silvino/" target="_blank" rel="noopener noreferrer" class="text-brand-sage hover:text-brand-dark transition-colors text-base" title="Profilo LinkedIn">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
                 </nav>
 
                 <!-- CTA Button Header -->
@@ -101,6 +115,9 @@
             <a href="#servizi" class="block px-3 py-2 rounded-lg text-base font-medium text-brand-dark hover:bg-brand-cream hover:text-brand-sage">Aree d'Intervento</a>
             <a href="#palette" class="block px-3 py-2 rounded-lg text-base font-medium text-brand-dark hover:bg-brand-cream hover:text-brand-sage">Colori &amp; Mood</a>
             <a href="#faq" class="block px-3 py-2 rounded-lg text-base font-medium text-brand-dark hover:bg-brand-cream hover:text-brand-sage">Domande Frequenti</a>
+            <a href="https://www.linkedin.com/in/angelo-lucio-silvino/" target="_blank" rel="noopener noreferrer" class="block px-3 py-2 rounded-lg text-base font-medium text-brand-sage hover:bg-brand-cream">
+                <i class="fa-brands fa-linkedin mr-2"></i> Profilo LinkedIn
+            </a>
             <a href="#contatti" class="block w-full text-center px-4 py-3 rounded-xl bg-brand-sage text-white font-medium shadow">Prenota un Colloquio</a>
         </div>
     </header>
@@ -147,13 +164,13 @@
                     </div>
                 </div>
 
-                <!-- Hero Image Illustration -->
+                <!-- Hero Image Foto Profilo Personale -->
                 <div class="lg:col-span-5 relative">
                     <div class="relative mx-auto max-w-md lg:max-w-none">
                         <div class="absolute -top-6 -bottom-6 -left-6 -right-6 bg-gradient-to-tr from-brand-sage/20 via-brand-honey/20 to-transparent rounded-3xl transform rotate-2 blur-lg"></div>
                         
                         <div class="relative bg-brand-softwhite p-4 rounded-3xl shadow-xl border border-brand-sage/10">
-                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" 
+                            <img src="foto-profilo.jpg" 
                                  alt="Dott. Angelo Lucio Silvino - Psicologo" 
                                  class="w-full h-[420px] object-cover rounded-2xl"
                                  onerror="this.src='https://placehold.co/800x800/4A7C59/FFFFFF?text=Dott.+Angelo+Lucio+Silvino'">
@@ -187,9 +204,7 @@
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                <!-- Color Palette Cards -->
                 <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-4">
-                    <!-- Verde Salvia Card -->
                     <div id="card-green" class="p-5 rounded-2xl border border-brand-sage/20 bg-brand-cream/50 cursor-pointer transition-all hover:shadow-md" onclick="selectColor('green')">
                         <div class="w-full h-16 rounded-xl bg-brand-sage mb-4 flex items-center justify-center text-white font-mono text-xs">
                             #4A7C59
@@ -202,7 +217,6 @@
                         </p>
                     </div>
 
-                    <!-- Giallo Miele Card -->
                     <div id="card-yellow" class="p-5 rounded-2xl border border-brand-honey/20 bg-brand-cream/50 cursor-pointer transition-all hover:shadow-md" onclick="selectColor('yellow')">
                         <div class="w-full h-16 rounded-xl bg-brand-honey mb-4 flex items-center justify-center text-white font-mono text-xs">
                             #E2A745
@@ -215,7 +229,6 @@
                         </p>
                     </div>
 
-                    <!-- Bianco Crema Card -->
                     <div id="card-cream" class="p-5 rounded-2xl border border-gray-200 bg-brand-cream/50 cursor-pointer transition-all hover:shadow-md" onclick="selectColor('cream')">
                         <div class="w-full h-16 rounded-xl bg-brand-cream border border-gray-200 mb-4 flex items-center justify-center text-brand-dark font-mono text-xs">
                             #FAF8F5
@@ -229,7 +242,6 @@
                     </div>
                 </div>
 
-                <!-- Live Dynamic Preview Panel -->
                 <div class="lg:col-span-5">
                     <div id="palette-preview" class="p-6 rounded-3xl bg-brand-cream border border-brand-sage/20 shadow-md transition-all duration-500">
                         <div class="flex items-center justify-between mb-4">
@@ -262,7 +274,7 @@
                 <div class="lg:col-span-5">
                     <div class="relative">
                         <div class="w-full h-[480px] rounded-3xl overflow-hidden shadow-xl border-4 border-brand-softwhite">
-                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80" 
+                            <img src="foto-profilo.jpg" 
                                  alt="Dott. Angelo Lucio Silvino nello studio" 
                                  class="w-full h-full object-cover"
                                  onerror="this.src='https://placehold.co/800x1000/4A7C59/FFFFFF?text=Dott.+Angelo+Lucio+Silvino'">
@@ -445,9 +457,7 @@
                 </p>
             </div>
 
-            <!-- 4 Steps Process -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
-                <!-- Step 1 -->
                 <div class="bg-brand-softwhite p-6 rounded-2xl border border-brand-sage/10 relative shadow-sm">
                     <span class="w-10 h-10 rounded-full bg-brand-cream border border-brand-sage/20 text-brand-sage font-bold flex items-center justify-center mb-4 text-base">01</span>
                     <h3 class="font-bold text-lg text-brand-dark mb-2">1. Primo Colloquio</h3>
@@ -456,7 +466,6 @@
                     </p>
                 </div>
 
-                <!-- Step 2 -->
                 <div class="bg-brand-softwhite p-6 rounded-2xl border border-brand-sage/10 relative shadow-sm">
                     <span class="w-10 h-10 rounded-full bg-brand-cream border border-brand-sage/20 text-brand-sage font-bold flex items-center justify-center mb-4 text-base">02</span>
                     <h3 class="font-bold text-lg text-brand-dark mb-2">2. Valutazione &amp; Obiettivi</h3>
@@ -465,7 +474,6 @@
                     </p>
                 </div>
 
-                <!-- Step 3 -->
                 <div class="bg-brand-softwhite p-6 rounded-2xl border border-brand-sage/10 relative shadow-sm">
                     <span class="w-10 h-10 rounded-full bg-brand-cream border border-brand-sage/20 text-brand-sage font-bold flex items-center justify-center mb-4 text-base">03</span>
                     <h3 class="font-bold text-lg text-brand-dark mb-2">3. Lavoro Attivo</h3>
@@ -474,7 +482,6 @@
                     </p>
                 </div>
 
-                <!-- Step 4 -->
                 <div class="bg-brand-softwhite p-6 rounded-2xl border border-brand-sage/10 relative shadow-sm">
                     <span class="w-10 h-10 rounded-full bg-brand-cream border border-brand-sage/20 text-brand-sage font-bold flex items-center justify-center mb-4 text-base">04</span>
                     <h3 class="font-bold text-lg text-brand-dark mb-2">4. Autonomia &amp; Conclusione</h3>
@@ -551,8 +558,8 @@
                 <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
             </div>
 
-            <!-- Contatti Diretti -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+            <!-- Contatti Diretti e LinkedIn -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
                 <div class="p-6 bg-brand-softwhite rounded-2xl border border-brand-sage/10 shadow-sm">
                     <div class="w-12 h-12 rounded-full bg-brand-sage/10 text-brand-sage flex items-center justify-center mx-auto mb-4 text-xl">
                         <i class="fa-solid fa-location-dot"></i>
@@ -576,6 +583,16 @@
                     <h4 class="font-bold text-brand-dark mb-1">Telefono / WhatsApp</h4>
                     <p class="text-xs text-brand-muted">+39 333 1234567</p>
                 </div>
+
+                <div class="p-6 bg-brand-softwhite rounded-2xl border border-brand-sage/10 shadow-sm">
+                    <a href="https://www.linkedin.com/in/angelo-lucio-silvino/" target="_blank" rel="noopener noreferrer" class="group block">
+                        <div class="w-12 h-12 rounded-full bg-brand-sage/10 text-brand-sage group-hover:bg-brand-sage group-hover:text-white transition-colors flex items-center justify-center mx-auto mb-4 text-xl">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </div>
+                        <h4 class="font-bold text-brand-dark mb-1 group-hover:text-brand-sage transition-colors">LinkedIn</h4>
+                        <p class="text-xs text-brand-muted">Collegati al Profilo</p>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -594,6 +611,7 @@
                         <li><a href="#chi-sono" class="hover:underline">Chi Sono</a></li>
                         <li><a href="#servizi" class="hover:underline">Aree d'Intervento</a></li>
                         <li><a href="#contatti" class="hover:underline">Prenota Calendario</a></li>
+                        <li><a href="https://www.linkedin.com/in/angelo-lucio-silvino/" target="_blank" rel="noopener noreferrer" class="hover:underline text-brand-honey">Profilo LinkedIn</a></li>
                     </ul>
                 </div>
                 <div>
@@ -609,7 +627,6 @@
 
     <!-- JavaScript for Mobile Menu & Interactive Palette -->
     <script>
-        // Mobile menu toggle
         const menuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
 
@@ -617,7 +634,6 @@
             mobileMenu.classList.toggle('hidden');
         });
 
-        // Color selection demo script
         function selectColor(color) {
             const preview = document.getElementById('palette-preview');
             const tag = document.getElementById('preview-tag');
