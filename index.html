@@ -71,7 +71,7 @@
     <header class="sticky top-0 z-50 bg-brand-softwhite/90 backdrop-blur-md border-b border-brand-sage/10 transition-all duration-300 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
-                <!-- Logo Personale (logo.jpg) -->
+                <!-- Logo Personale -->
                 <a href="#" class="flex items-center gap-3 group">
                     <img src="logo.jpg" alt="Logo Dott. Angelo Lucio Silvino" class="h-10 sm:h-12 w-auto object-contain transition-transform group-hover:scale-105" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'w-10 h-10 rounded-full bg-brand-sage flex items-center justify-center text-white font-serif text-sm font-bold shadow-sm\'>ALS</div><div><span class=\'block font-serif text-xl font-semibold text-brand-dark leading-tight\'>Dott. Angelo Lucio Silvino</span><span class=\'block text-xs text-brand-sage font-medium tracking-wide\'>Psicologo</span></div>';">
                     <div class="hidden sm:block">
@@ -125,7 +125,7 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section (Con Logo anziché foto profilo) -->
     <section class="relative overflow-hidden hero-bg py-12 lg:py-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -167,16 +167,16 @@
                     </div>
                 </div>
 
-                <!-- Hero Image Foto Profilo Personale (Ottimizzata per mobile) -->
+                <!-- Hero Image (Logo) -->
                 <div class="lg:col-span-5 relative">
                     <div class="relative mx-auto max-w-xs sm:max-w-md lg:max-w-none">
                         <div class="absolute -top-6 -bottom-6 -left-6 -right-6 bg-gradient-to-tr from-brand-sage/20 via-brand-honey/20 to-transparent rounded-3xl transform rotate-2 blur-lg"></div>
                         
-                        <div class="relative bg-brand-softwhite p-3 sm:p-4 rounded-3xl shadow-xl border border-brand-sage/10">
+                        <div class="relative bg-brand-softwhite p-6 sm:p-8 rounded-3xl shadow-xl border border-brand-sage/10 text-center">
                             <img src="logo.jpg" 
-                                 alt="Dott. Angelo Lucio Silvino - Psicologo" 
-                                 class="w-full h-72 sm:h-[420px] object-cover rounded-2xl"
-                                 onerror="this.src='https://placehold.co/800x800/4A7C59/FFFFFF?text=Dott.+Angelo+Lucio+Silvino'">
+                                 alt="Logo Dott. Angelo Lucio Silvino" 
+                                 class="w-full h-64 sm:h-80 object-contain mx-auto rounded-2xl"
+                                 onerror="this.onerror=null; this.src='https://placehold.co/800x800/4A7C59/FFFFFF?text=Dott.+Angelo+Lucio+Silvino';">
                             
                             <!-- Floating Badge -->
                             <div class="absolute -bottom-4 -left-2 sm:-bottom-5 sm:-left-5 bg-brand-softwhite p-3 sm:p-4 rounded-2xl shadow-lg border border-brand-sage/10 flex items-center gap-3">
@@ -195,11 +195,11 @@
         </div>
     </section>
 
-    <!-- Chi Sono / About Section -->
+    <!-- 1. Chi Sono / About Section -->
     <section id="chi-sono" class="py-16 sm:py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                <!-- Image Column (Ottimizzata per mobile) -->
+                <!-- Image Column (Foto Profilo) -->
                 <div class="lg:col-span-5">
                     <div class="relative max-w-xs sm:max-w-md mx-auto lg:max-w-none">
                         <div class="w-full h-80 sm:h-[480px] rounded-3xl overflow-hidden shadow-xl border-4 border-brand-softwhite">
@@ -255,8 +255,55 @@
         </div>
     </section>
 
-    <!-- Services Section / Aree di Intervento -->
-    <section id="servizi" class="py-16 sm:py-20 bg-brand-softwhite">
+    <!-- 2. Method & Approach Section (Metodo) -->
+    <section id="approccio" class="py-16 sm:py-20 bg-brand-softwhite">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-sage font-semibold text-sm tracking-wider uppercase">Il Percorso di Consulenza</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-dark mt-2">Come Funziona il Mio Metodo</h2>
+                <p class="text-brand-muted mt-3 text-sm sm:text-base">
+                    Un processo strutturato ma flessibile, suddiviso in 4 tappe chiave per accompagnarti verso la tua serenità.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
+                <div class="bg-brand-cream/60 p-6 rounded-2xl border border-brand-sage/10 relative shadow-sm">
+                    <span class="w-10 h-10 rounded-full bg-brand-softwhite border border-brand-sage/20 text-brand-sage font-bold flex items-center justify-center mb-4 text-base">01</span>
+                    <h3 class="font-bold text-lg text-brand-dark mb-2">1. Primo Colloquio</h3>
+                    <p class="text-xs text-brand-muted leading-relaxed">
+                        Incontro conoscitivo online per ascoltare la tua storia, comprendere i tuoi bisogni attuali e valutare insieme il percorso.
+                    </p>
+                </div>
+
+                <div class="bg-brand-cream/60 p-6 rounded-2xl border border-brand-sage/10 relative shadow-sm">
+                    <span class="w-10 h-10 rounded-full bg-brand-softwhite border border-brand-sage/20 text-brand-sage font-bold flex items-center justify-center mb-4 text-base">02</span>
+                    <h3 class="font-bold text-lg text-brand-dark mb-2">2. Valutazione &amp; Obiettivi</h3>
+                    <p class="text-xs text-brand-muted leading-relaxed">
+                        Definiamo insieme gli obiettivi specifici del percorso e concordiamo la frequenza degli incontri in completa trasparenza.
+                    </p>
+                </div>
+
+                <div class="bg-brand-cream/60 p-6 rounded-2xl border border-brand-sage/10 relative shadow-sm">
+                    <span class="w-10 h-10 rounded-full bg-brand-softwhite border border-brand-sage/20 text-brand-sage font-bold flex items-center justify-center mb-4 text-base">03</span>
+                    <h3 class="font-bold text-lg text-brand-dark mb-2">3. Lavoro Attivo</h3>
+                    <p class="text-xs text-brand-muted leading-relaxed">
+                        Sviluppiamo strategie pratiche per affrontare le difficoltà e sviluppare nuove abilità personali.
+                    </p>
+                </div>
+
+                <div class="bg-brand-cream/60 p-6 rounded-2xl border border-brand-sage/10 relative shadow-sm">
+                    <span class="w-10 h-10 rounded-full bg-brand-softwhite border border-brand-sage/20 text-brand-sage font-bold flex items-center justify-center mb-4 text-base">04</span>
+                    <h3 class="font-bold text-lg text-brand-dark mb-2">4. Autonomia &amp; Conclusione</h3>
+                    <p class="text-xs text-brand-muted leading-relaxed">
+                        Verifichiamo i traguardi raggiunti per consolidare i cambiamenti e favorire la piena autonomia personale nel tempo.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Services Section / Aree di Intervento -->
+    <section id="servizi" class="py-16 sm:py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <span class="text-brand-sage font-semibold text-sm tracking-wider uppercase">Come Posso Aiutarti</span>
@@ -268,7 +315,7 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Card 1 -->
-                <div class="bg-brand-cream/60 p-6 sm:p-8 rounded-3xl border border-brand-sage/10 card-transition flex flex-col justify-between">
+                <div class="bg-brand-softwhite p-6 sm:p-8 rounded-3xl border border-brand-sage/10 card-transition flex flex-col justify-between shadow-sm">
                     <div>
                         <div class="w-12 h-12 rounded-2xl bg-brand-sage text-white flex items-center justify-center text-xl mb-6 shadow-sm">
                             <i class="fa-solid fa-wind"></i>
@@ -285,7 +332,7 @@
                 </div>
 
                 <!-- Card 2 -->
-                <div class="bg-brand-cream/60 p-6 sm:p-8 rounded-3xl border border-brand-honey/30 card-transition flex flex-col justify-between relative overflow-hidden">
+                <div class="bg-brand-softwhite p-6 sm:p-8 rounded-3xl border border-brand-honey/30 card-transition flex flex-col justify-between relative overflow-hidden shadow-sm">
                     <div class="absolute top-0 right-0 bg-brand-honey text-white text-[10px] font-bold uppercase px-3 py-1 rounded-bl-xl tracking-wider">
                         Consigliato
                     </div>
@@ -305,7 +352,7 @@
                 </div>
 
                 <!-- Card 3 -->
-                <div class="bg-brand-cream/60 p-6 sm:p-8 rounded-3xl border border-brand-sage/10 card-transition flex flex-col justify-between">
+                <div class="bg-brand-softwhite p-6 sm:p-8 rounded-3xl border border-brand-sage/10 card-transition flex flex-col justify-between shadow-sm">
                     <div>
                         <div class="w-12 h-12 rounded-2xl bg-brand-sage text-white flex items-center justify-center text-xl mb-6 shadow-sm">
                             <i class="fa-solid fa-people-arrows"></i>
@@ -322,7 +369,7 @@
                 </div>
 
                 <!-- Card 4 -->
-                <div class="bg-brand-cream/60 p-6 sm:p-8 rounded-3xl border border-brand-sage/10 card-transition flex flex-col justify-between">
+                <div class="bg-brand-softwhite p-6 sm:p-8 rounded-3xl border border-brand-sage/10 card-transition flex flex-col justify-between shadow-sm">
                     <div>
                         <div class="w-12 h-12 rounded-2xl bg-brand-sage text-white flex items-center justify-center text-xl mb-6 shadow-sm">
                             <i class="fa-solid fa-compass-drafting"></i>
@@ -339,7 +386,7 @@
                 </div>
 
                 <!-- Card 5 -->
-                <div class="bg-brand-cream/60 p-6 sm:p-8 rounded-3xl border border-brand-sage/10 card-transition flex flex-col justify-between">
+                <div class="bg-brand-softwhite p-6 sm:p-8 rounded-3xl border border-brand-sage/10 card-transition flex flex-col justify-between shadow-sm">
                     <div>
                         <div class="w-12 h-12 rounded-2xl bg-brand-sage text-white flex items-center justify-center text-xl mb-6 shadow-sm">
                             <i class="fa-solid fa-laptop-medical"></i>
@@ -356,7 +403,7 @@
                 </div>
 
                 <!-- Card 6 -->
-                <div class="bg-brand-cream/60 p-6 sm:p-8 rounded-3xl border border-brand-sage/10 card-transition flex flex-col justify-between">
+                <div class="bg-brand-softwhite p-6 sm:p-8 rounded-3xl border border-brand-sage/10 card-transition flex flex-col justify-between shadow-sm">
                     <div>
                         <div class="w-12 h-12 rounded-2xl bg-brand-sage text-white flex items-center justify-center text-xl mb-6 shadow-sm">
                             <i class="fa-solid fa-vr-cardboard"></i>
@@ -375,7 +422,7 @@
         </div>
     </section>
 
-    <!-- Realtà Virtuale Immersiva Section -->
+    <!-- 4. Realtà Virtuale Immersiva Section -->
     <section id="vr" class="py-16 sm:py-20 bg-brand-softwhite border-y border-brand-sage/10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -425,14 +472,14 @@
         </div>
     </section>
 
-    <!-- Blog Section -->
+    <!-- 5. Blog Section -->
     <section id="blog" class="py-16 sm:py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <span class="text-brand-sage font-semibold text-sm tracking-wider uppercase">Spunti &amp; Approfondimenti</span>
                 <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-dark mt-2">Il Blog</h2>
                 <p class="text-brand-muted mt-3 text-sm sm:text-base">
-                    Brevi riflessioni, idee e spunti di psicologia per comprendere meglio le emozioni di tutti i giorni.
+                    Brevi riflessioni, idee e spunti di psicologia per comprendere meglio le emozioni di tutti i giorni. Clicca su "Approfondisci" per leggere l'articolo completo.
                 </p>
             </div>
 
@@ -451,7 +498,7 @@
                     </div>
                     <div class="border-t border-brand-sage/10 pt-4 flex items-center justify-between text-xs font-semibold text-brand-sage">
                         <span>Lettura rapida (3 min)</span>
-                        <a href="#contatti" class="hover:underline">Approfondisci <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                        <button onclick="openModal('articolo1')" class="hover:underline cursor-pointer focus:outline-none">Approfondisci <i class="fa-solid fa-arrow-right ml-1"></i></button>
                     </div>
                 </article>
 
@@ -469,7 +516,7 @@
                     </div>
                     <div class="border-t border-brand-sage/10 pt-4 flex items-center justify-between text-xs font-semibold text-brand-sage">
                         <span>Lettura rapida (2 min)</span>
-                        <a href="#contatti" class="hover:underline">Approfondisci <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                        <button onclick="openModal('articolo2')" class="hover:underline cursor-pointer focus:outline-none">Approfondisci <i class="fa-solid fa-arrow-right ml-1"></i></button>
                     </div>
                 </article>
 
@@ -487,62 +534,33 @@
                     </div>
                     <div class="border-t border-brand-sage/10 pt-4 flex items-center justify-between text-xs font-semibold text-brand-sage">
                         <span>Lettura rapida (4 min)</span>
-                        <a href="#contatti" class="hover:underline">Approfondisci <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                        <button onclick="openModal('articolo3')" class="hover:underline cursor-pointer focus:outline-none">Approfondisci <i class="fa-solid fa-arrow-right ml-1"></i></button>
                     </div>
                 </article>
             </div>
         </div>
     </section>
 
-    <!-- Method & Approach Section -->
-    <section id="approccio" class="py-16 sm:py-20 bg-brand-softwhite">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-brand-sage font-semibold text-sm tracking-wider uppercase">Il Percorso di Consulenza</span>
-                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-dark mt-2">Come Funziona il Mio Metodo</h2>
-                <p class="text-brand-muted mt-3 text-sm sm:text-base">
-                    Un processo strutturato ma flessibile, suddiviso in 4 tappe chiave per accompagnarti verso la tua serenità.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
-                <div class="bg-brand-cream/60 p-6 rounded-2xl border border-brand-sage/10 relative shadow-sm">
-                    <span class="w-10 h-10 rounded-full bg-brand-softwhite border border-brand-sage/20 text-brand-sage font-bold flex items-center justify-center mb-4 text-base">01</span>
-                    <h3 class="font-bold text-lg text-brand-dark mb-2">1. Primo Colloquio</h3>
-                    <p class="text-xs text-brand-muted leading-relaxed">
-                        Incontro conoscitivo online per ascoltare la tua storia, comprendere i tuoi bisogni attuali e valutare insieme il percorso.
-                    </p>
-                </div>
-
-                <div class="bg-brand-cream/60 p-6 rounded-2xl border border-brand-sage/10 relative shadow-sm">
-                    <span class="w-10 h-10 rounded-full bg-brand-softwhite border border-brand-sage/20 text-brand-sage font-bold flex items-center justify-center mb-4 text-base">02</span>
-                    <h3 class="font-bold text-lg text-brand-dark mb-2">2. Valutazione &amp; Obiettivi</h3>
-                    <p class="text-xs text-brand-muted leading-relaxed">
-                        Definiamo insieme gli obiettivi specifici del percorso e concordiamo la frequenza degli incontri in completa trasparenza.
-                    </p>
-                </div>
-
-                <div class="bg-brand-cream/60 p-6 rounded-2xl border border-brand-sage/10 relative shadow-sm">
-                    <span class="w-10 h-10 rounded-full bg-brand-softwhite border border-brand-sage/20 text-brand-sage font-bold flex items-center justify-center mb-4 text-base">03</span>
-                    <h3 class="font-bold text-lg text-brand-dark mb-2">3. Lavoro Attivo</h3>
-                    <p class="text-xs text-brand-muted leading-relaxed">
-                        Sviluppiamo strategie pratiche per affrontare le difficoltà e sviluppare nuove abilità personali.
-                    </p>
-                </div>
-
-                <div class="bg-brand-cream/60 p-6 rounded-2xl border border-brand-sage/10 relative shadow-sm">
-                    <span class="w-10 h-10 rounded-full bg-brand-softwhite border border-brand-sage/20 text-brand-sage font-bold flex items-center justify-center mb-4 text-base">04</span>
-                    <h3 class="font-bold text-lg text-brand-dark mb-2">4. Autonomia &amp; Conclusione</h3>
-                    <p class="text-xs text-brand-muted leading-relaxed">
-                        Verifichiamo i traguardi raggiunti per consolidare i cambiamenti e favorire la piena autonomia personale nel tempo.
-                    </p>
-                </div>
+    <!-- Finestra di Lettura (Modal) -->
+    <div id="blogModal" class="fixed inset-0 z-50 hidden bg-brand-dark/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-brand-softwhite max-w-2xl w-full rounded-3xl p-6 sm:p-8 shadow-2xl relative max-h-[85vh] overflow-y-auto">
+            <button onclick="closeModal()" class="absolute top-5 right-5 text-brand-muted hover:text-brand-dark text-xl p-2">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div id="modalContent" class="space-y-4 text-brand-dark"></div>
+            <div class="mt-8 pt-4 border-t border-brand-sage/10 flex justify-between items-center">
+                <a href="#contatti" onclick="closeModal()" class="text-xs sm:text-sm font-semibold text-brand-sage hover:underline">
+                    <i class="fa-regular fa-calendar-check mr-1"></i> Vuoi parlarne in un colloquio? Prenota qui
+                </a>
+                <button onclick="closeModal()" class="px-5 py-2 rounded-full bg-brand-sage text-white text-sm font-medium hover:bg-brand-sage/90 transition-all">
+                    Chiudi
+                </button>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- FAQ Section -->
-    <section id="faq" class="py-16 sm:py-20">
+    <!-- 6. FAQ Section -->
+    <section id="faq" class="py-16 sm:py-20 bg-brand-softwhite">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
                 <span class="text-brand-sage font-semibold text-sm tracking-wider uppercase">Chiarezza &amp; Trasparenza</span>
@@ -550,7 +568,7 @@
             </div>
 
             <div class="space-y-4">
-                <details class="group bg-brand-softwhite rounded-2xl p-6 border border-brand-sage/10 [&_summary::-webkit-details-marker]:hidden shadow-sm">
+                <details class="group bg-brand-cream/50 rounded-2xl p-6 border border-brand-sage/10 [&_summary::-webkit-details-marker]:hidden shadow-sm">
                     <summary class="flex items-center justify-between cursor-pointer font-semibold text-brand-dark text-base sm:text-lg">
                         <span>Quanto dura un percorso psicologico online?</span>
                         <span class="transition group-open:rotate-180 text-brand-sage">
@@ -562,7 +580,7 @@
                     </p>
                 </details>
 
-                <details class="group bg-brand-softwhite rounded-2xl p-6 border border-brand-sage/10 [&_summary::-webkit-details-marker]:hidden shadow-sm">
+                <details class="group bg-brand-cream/50 rounded-2xl p-6 border border-brand-sage/10 [&_summary::-webkit-details-marker]:hidden shadow-sm">
                     <summary class="flex items-center justify-between cursor-pointer font-semibold text-brand-dark text-base sm:text-lg">
                         <span>Le sedute online sono efficaci quanto quelle in presenza?</span>
                         <span class="transition group-open:rotate-180 text-brand-sage">
@@ -574,7 +592,7 @@
                     </p>
                 </details>
 
-                <details class="group bg-brand-softwhite rounded-2xl p-6 border border-brand-sage/10 [&_summary::-webkit-details-marker]:hidden shadow-sm">
+                <details class="group bg-brand-cream/50 rounded-2xl p-6 border border-brand-sage/10 [&_summary::-webkit-details-marker]:hidden shadow-sm">
                     <summary class="flex items-center justify-between cursor-pointer font-semibold text-brand-dark text-base sm:text-lg">
                         <span>Come funziona la riservatezza e la privacy?</span>
                         <span class="transition group-open:rotate-180 text-brand-sage">
@@ -589,7 +607,7 @@
         </div>
     </section>
 
-    <!-- Contact & Calendly Booking Section -->
+    <!-- 7. Contact & Calendly Booking Section -->
     <section id="contatti" class="py-16 sm:py-20 hero-bg border-t border-brand-sage/10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-12">
@@ -667,14 +685,82 @@
         </div>
     </footer>
 
-    <!-- JavaScript Mobile Menu -->
+    <!-- JavaScript Script -->
     <script>
+        // Gestione Menu Mobile
         const menuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
 
         menuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
+
+        // Contenuti completi degli articoli del blog
+        const articoliBlog = {
+            articolo1: {
+                titolo: "Perché l'ansia non è una nemica da combattere",
+                data: "Ottobre 2026",
+                categoria: "Emotività",
+                testo: `
+                    <p class="text-brand-muted text-sm leading-relaxed mb-4">Spesso percepiamo l'ansia come un nemico invisibile da sconfiggere o eliminare a tutti i costi. Quando avvertiamo il battito accelerato, il respiro corto o una preoccupazione persistente, la reazione automatica è l'opposizione: cerchiamo di scacciarla, di calmarci forzatamente o ci arrabbiamo con noi stessi per non essere abbastanza forti.</p>
+                    <p class="text-brand-muted text-sm leading-relaxed mb-4">Eppure, da un punto di vista psicologico, l'ansia non è un malfunzionamento della mente, ma un antico e sofisticato sistema di allarme del nostro organismo. È il modo in cui il corpo ci segnala che qualcosa, dentro o fuori di noi, richiede la nostra attenzione.</p>
+                    <p class="text-brand-muted text-sm leading-relaxed mb-4">Quando impariamo a cambiare prospettiva — smettendo di combattere l'ansia e iniziando ad ascoltarla come un messaggero — la tensione inizia a trasformarsi. Accogliere l'emozione anziché respingerla è il primo passo fondamentale per ridurne l'intensità e ritrovare il controllo.</p>
+                `
+            },
+            articolo2: {
+                titolo: "Il potere dei piccoli confini personali",
+                data: "Ottobre 2026",
+                categoria: "Benessere",
+                testo: `
+                    <p class="text-brand-muted text-sm leading-relaxed mb-4">Nel tentativo di essere sempre disponibili per gli amici, la famiglia o sul lavoro, finiamo spesso per dimenticarci di noi stessi. Dire sempre di sì a tutto e a tutti, per paura di deludere o di sembrare egoisti, consuma lentamente le nostre energie mentali.</p>
+                    <p class="text-brand-muted text-sm leading-relaxed mb-4">Imparare a dire qualche "no" in più non significa chiudersi agli altri o diventare freddi; al contrario, significa proteggere il proprio spazio interiore e la propria salute emotiva. I confini sani sono come le fondamenta di una casa: definiscono lo spazio in cui possiamo abitare in sicurezza e prenderci cura di chi amiamo senza esaurire le nostre risorse.</p>
+                    <p class="text-brand-muted text-sm leading-relaxed mb-4">Stabilire un confine richiede un piccolo atto di coraggio iniziale, ma ripaga nel tempo con relazioni più autentiche, sincere e basate sul rispetto reciproco.</p>
+                `
+            },
+            articolo3: {
+                titolo: "Come la tecnologia incontra la mente",
+                data: "Settembre 2026",
+                categoria: "Tecnologia",
+                testo: `
+                    <p class="text-brand-muted text-sm leading-relaxed mb-4">Il mondo della psicologia clinica si sta evolvendo rapidamente grazie all'integrazione di strumenti tecnologici innovativi. Tra questi, la Realtà Virtuale Immersiva (VR) rappresenta una delle frontiere più affascinanti ed efficaci per il supporto psicologico.</p>
+                    <p class="text-brand-muted text-sm leading-relaxed mb-4">Attraverso visori dedicati, è possibile riprodurre ambienti controllati e rilassanti — come paesaggi naturali rigeneranti — oppure affrontare in modo graduale e sicuro situazioni che generano stress o tensione, il tutto all'interno dello studio virtuale e sotto la costante guida dello psicologo.</p>
+                    <p class="text-brand-muted text-sm leading-relaxed mb-4">La tecnologia non sostituisce l'empatia e l'ascolto umano, ma offre un ponte straordinario per accelerare la consapevolezza e facilitare le tecniche di rilassamento profondo.</p>
+                `
+            }
+        };
+
+        // Funzioni per aprire e chiudere la finestra modale
+        function openModal(idArticolo) {
+            const articolo = articoliBlog[idArticolo];
+            if (!articolo) return;
+
+            const modalContent = document.getElementById('modalContent');
+            modalContent.innerHTML = `
+                <div class="flex items-center justify-between text-xs text-brand-muted mb-2">
+                    <span><i class="fa-regular fa-calendar mr-1"></i> ${articolo.data}</span>
+                    <span class="px-2.5 py-0.5 rounded-full bg-brand-sage/10 text-brand-sage font-semibold">${articolo.categoria}</span>
+                </div>
+                <h3 class="font-serif text-2xl sm:text-3xl font-bold text-brand-dark mb-4">${articolo.titolo}</h3>
+                <div class="space-y-3 leading-relaxed">
+                    ${articolo.testo}
+                </div>
+            `;
+
+            document.getElementById('blogModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('blogModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('blogModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
     </script>
 </body>
 </html>
