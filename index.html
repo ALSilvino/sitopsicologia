@@ -1,77 +1,76 @@
-```html
 <!DOCTYPE html>
 <html lang="it" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- SEO -->
     <title>Dott. Angelo Lucio Silvino | Psicologo Online</title>
+    
+    <!-- Meta Tag SEO e Canonical -->
     <meta name="description" content="Dott. Angelo Lucio Silvino, Psicologo in Campania. Percorsi psicologici online, neuropsicologia dell’adulto, neurosviluppo e formazione professionale.">
     <meta name="author" content="Dott. Angelo Lucio Silvino">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://TUODOMINIO.it/">
+    <link rel="canonical" href="https://www.angeloluciosilvino.it/">
 
-    <!-- Open Graph -->
+    <!-- Open Graph / Social & LinkedIn Preview -->
     <meta property="og:title" content="Dott. Angelo Lucio Silvino | Psicologo Online">
     <meta property="og:description" content="Percorsi psicologici online, neuropsicologia dell’adulto, neurosviluppo e formazione professionale.">
-    <meta property="og:url" content="https://TUODOMINIO.it/">
+    <meta property="og:url" content="https://www.angeloluciosilvino.it/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Dott. Angelo Lucio Silvino">
     <meta property="og:locale" content="it_IT">
-    <meta property="og:image" content="https://TUODOMINIO.it/foto-profilo.jpg">
 
-    <!-- Structured Data -->
+    <!-- Structured Data Schema.org -->
     <script type="application/ld+json">
     {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Angelo Lucio Silvino",
-        "jobTitle": "Psicologo",
-        "url": "https://TUODOMINIO.it/",
-        "image": "https://TUODOMINIO.it/foto-profilo.jpg",
-        "sameAs": [
-            "https://www.linkedin.com/in/angelo-lucio-silvino/"
-        ],
-        "knowsAbout": [
-            "Psicologia clinica",
-            "Neuropsicologia",
-            "Neurosviluppo",
-            "Psicologia cognitiva",
-            "Realtà Virtuale",
-            "Realtà Aumentata"
-        ]
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Angelo Lucio Silvino",
+      "jobTitle": "Psicologo",
+      "url": "https://www.angeloluciosilvino.it/",
+      "image": "https://www.angeloluciosilvino.it/foto-profilo.jpg",
+      "sameAs": [
+        "https://www.linkedin.com/in/angelo-lucio-silvino/"
+      ],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Dott. Angelo Lucio Silvino"
+      },
+      "knowsAbout": [
+        "Psicologia clinica",
+        "Neuropsicologia",
+        "Neurosviluppo",
+        "Realtà Virtuale",
+        "Realtà Aumentata",
+        "Psicologia cognitiva"
+      ]
     }
     </script>
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
     <!-- Calendly Widget Script -->
     <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-
+    
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
                         brand: {
-                            sage: '#4A7C59',
-                            mint: '#88B04B',
-                            honey: '#E2A745',
-                            mustard: '#F2C94C',
-                            cream: '#FAF8F5',
-                            softwhite: '#FFFFFF',
-                            dark: '#2C3E50',
-                            muted: '#5A6B7C'
+                            sage: '#4A7C59',      /* Verde Salvia */
+                            mint: '#88B04B',      
+                            honey: '#E2A745',     /* Giallo Miele */
+                            mustard: '#F2C94C',   
+                            cream: '#FAF8F5',     /* Sfondo Crema */
+                            softwhite: '#FFFFFF', 
+                            dark: '#2C3E50',      
+                            muted: '#5A6B7C'      
                         }
                     },
                     fontFamily: {
@@ -82,138 +81,94 @@
             }
         }
     </script>
-
     <style>
         .custom-shadow {
             box-shadow: 0 10px 30px -5px rgba(74, 124, 89, 0.08);
         }
-
         .hero-bg {
             background: linear-gradient(135deg, #FAF8F5 0%, #F3F7F4 100%);
         }
-
         .card-transition {
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-
         .card-transition:hover {
             transform: translateY(-4px);
         }
-
+        /* Classi di accessibilità dinamiche */
         body.access-grayscale {
             filter: grayscale(100%);
         }
-
         body.access-high-contrast {
             background-color: #000000 !important;
             color: #ffffff !important;
         }
-
         body.access-high-contrast * {
             border-color: #ffffff !important;
         }
-
         body.access-links-highlight a {
             text-decoration: underline !important;
             text-decoration-thickness: 2px !important;
             background-color: rgba(226, 167, 69, 0.2) !important;
         }
-
-        body.access-readable-font,
-        body.access-readable-font * {
+        body.access-readable-font, body.access-readable-font * {
             font-family: Arial, Helvetica, sans-serif !important;
             letter-spacing: 0.5px !important;
             line-height: 1.6 !important;
         }
     </style>
 </head>
-
 <body class="bg-brand-cream text-brand-dark font-sans antialiased selection:bg-brand-honey/30">
 
-    <!-- Widget Accessibilità -->
+    <!-- Widget di Accessibilità Flottante Esteso (Visivo, Motorio e Cognitivo) -->
     <div id="accessibility-widget" class="fixed bottom-6 left-6 z-50">
-
-        <button
-            id="accessibility-toggle"
-            aria-label="Apri menu accessibilità e strumenti di inclusione"
-            class="w-12 h-12 rounded-full bg-brand-sage text-white shadow-lg flex items-center justify-center hover:bg-brand-sage/90 transition-transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-brand-sage/40">
+        <!-- Pulsante di Apertura Widget -->
+        <button id="accessibility-toggle" aria-label="Apri menu accessibilità e strumenti di inclusione" class="w-12 h-12 rounded-full bg-brand-sage text-white shadow-lg flex items-center justify-center hover:bg-brand-sage/90 transition-transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-brand-sage/40">
             <i class="fa-solid fa-universal-access text-xl" aria-hidden="true"></i>
         </button>
 
-        <div
-            id="accessibility-menu"
-            class="hidden absolute bottom-16 left-0 bg-brand-softwhite border border-brand-sage/20 rounded-2xl shadow-2xl p-4 w-72 space-y-3 text-brand-dark"
-            role="region"
-            aria-label="Menu di accessibilità">
-
+        <!-- Pannello di Controllo Accessibilità -->
+        <div id="accessibility-menu" class="hidden absolute bottom-16 left-0 bg-brand-softwhite border border-brand-sage/20 rounded-2xl shadow-2xl p-4 w-72 space-y-3 text-brand-dark" role="region" aria-label="Menu di accessibilità">
             <div class="flex items-center justify-between border-b border-brand-sage/10 pb-2">
                 <span class="font-serif font-bold text-sm flex items-center gap-2 text-brand-sage">
-                    <i class="fa-solid fa-universal-access" aria-hidden="true"></i>
-                    Accessibilità &amp; Inclusione
+                    <i class="fa-solid fa-universal-access" aria-hidden="true"></i> Accessibilità &amp; Inclusione
                 </span>
-
-                <button
-                    id="accessibility-close"
-                    class="text-brand-muted hover:text-brand-dark text-xs font-bold px-2 py-1 rounded"
-                    aria-label="Chiudi menu accessibilità">
-                    ✕
-                </button>
+                <button id="accessibility-close" class="text-brand-muted hover:text-brand-dark text-xs font-bold px-2 py-1 rounded" aria-label="Chiudi menu accessibilità">✕</button>
             </div>
-
+            
             <div class="space-y-3 text-xs">
-
+                <!-- Controllo Dimensione Testo -->
                 <div>
                     <p class="font-semibold text-brand-muted mb-1">Dimensione Testo</p>
-
                     <div class="grid grid-cols-2 gap-2">
-                        <button
-                            id="font-increase"
-                            class="px-3 py-1.5 rounded bg-brand-cream hover:bg-brand-sage hover:text-white transition-colors border border-brand-sage/10 font-medium">
-                            A+ Ingrandisci
-                        </button>
-
-                        <button
-                            id="font-reset"
-                            class="px-3 py-1.5 rounded bg-brand-cream hover:bg-brand-sage hover:text-white transition-colors border border-brand-sage/10 font-medium">
-                            Ripristina
-                        </button>
+                        <button id="font-increase" class="px-3 py-1.5 rounded bg-brand-cream hover:bg-brand-sage hover:text-white transition-colors border border-brand-sage/10 font-medium">A+ Ingrandisci</button>
+                        <button id="font-reset" class="px-3 py-1.5 rounded bg-brand-cream hover:bg-brand-sage hover:text-white transition-colors border border-brand-sage/10 font-medium">Ripristina</button>
                     </div>
                 </div>
 
+                <!-- Filtri Visivi -->
                 <div>
                     <p class="font-semibold text-brand-muted mb-1">Visualizzazione</p>
-
                     <div class="space-y-1.5">
-                        <button
-                            id="toggle-grayscale"
-                            class="w-full text-left px-3 py-1.5 rounded bg-brand-cream hover:bg-brand-sage hover:text-white transition-colors border border-brand-sage/10 flex items-center justify-between">
+                        <button id="toggle-grayscale" class="w-full text-left px-3 py-1.5 rounded bg-brand-cream hover:bg-brand-sage hover:text-white transition-colors border border-brand-sage/10 flex items-center justify-between">
                             <span>Scala di grigi</span>
                             <i class="fa-solid fa-adjust text-[10px]" aria-hidden="true"></i>
                         </button>
-
-                        <button
-                            id="toggle-contrast"
-                            class="w-full text-left px-3 py-1.5 rounded bg-brand-cream hover:bg-brand-sage hover:text-white transition-colors border border-brand-sage/10 flex items-center justify-between">
+                        <button id="toggle-contrast" class="w-full text-left px-3 py-1.5 rounded bg-brand-cream hover:bg-brand-sage hover:text-white transition-colors border border-brand-sage/10 flex items-center justify-between">
                             <span>Contrasto elevato</span>
                             <i class="fa-solid fa-circle-half-stroke text-[10px]" aria-hidden="true"></i>
                         </button>
                     </div>
                 </div>
 
+                <!-- Accessibilità Motoria e Cognitiva -->
                 <div>
                     <p class="font-semibold text-brand-muted mb-1">Supporti Motori e di Lettura</p>
-
                     <div class="space-y-1.5">
-                        <button
-                            id="toggle-links"
-                            class="w-full text-left px-3 py-1.5 rounded bg-brand-cream hover:bg-brand-sage hover:text-white transition-colors border border-brand-sage/10 flex items-center justify-between">
+                        <button id="toggle-links" class="w-full text-left px-3 py-1.5 rounded bg-brand-cream hover:bg-brand-sage hover:text-white transition-colors border border-brand-sage/10 flex items-center justify-between">
                             <span>Evidenzia link</span>
                             <i class="fa-solid fa-link text-[10px]" aria-hidden="true"></i>
                         </button>
-
-                        <button
-                            id="toggle-readable-font"
-                            class="w-full text-left px-3 py-1.5 rounded bg-brand-cream hover:bg-brand-sage hover:text-white transition-colors border border-brand-sage/10 flex items-center justify-between">
+                        <button id="toggle-readable-font" class="w-full text-left px-3 py-1.5 rounded bg-brand-cream hover:bg-brand-sage hover:text-white transition-colors border border-brand-sage/10 flex items-center justify-between">
                             <span>Font ad alta leggibilità</span>
                             <i class="fa-solid fa-font text-[10px]" aria-hidden="true"></i>
                         </button>
@@ -223,545 +178,564 @@
         </div>
     </div>
 
-
-    <!-- HEADER -->
+    <!-- Header / Navigation Bar[cite: 2, 3] -->
     <header class="sticky top-0 z-50 bg-brand-softwhite/90 backdrop-blur-md border-b border-brand-sage/10 transition-all duration-300 shadow-sm">
-
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
             <div class="flex items-center justify-between h-20">
-
+                <!-- Logo Personale (.png) -->
                 <a href="#" class="flex items-center gap-3 group">
-
-                    <img
-                        src="logo.png"
-                        alt="Logo del Dott. Angelo Lucio Silvino, Psicologo"
-                        class="h-10 sm:h-12 w-auto object-contain transition-transform group-hover:scale-105"
-                        onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'w-10 h-10 rounded-full bg-brand-sage flex items-center justify-center text-white font-serif text-sm font-bold shadow-sm\'>ALS</div><div><span class=\'block font-serif text-xl font-semibold text-brand-dark leading-tight\'>Dott. Angelo Lucio Silvino</span><span class=\'block text-xs text-brand-sage font-medium tracking-wide\'>Psicologo</span></div>';">
-
+                    <img src="logo.png" alt="Logo Dott. Angelo Lucio Silvino" class="h-10 sm:h-12 w-auto object-contain transition-transform group-hover:scale-105" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'w-10 h-10 rounded-full bg-brand-sage flex items-center justify-center text-white font-serif text-sm font-bold shadow-sm\'>ALS</div><div><span class=\'block font-serif text-xl font-semibold text-brand-dark leading-tight\'>Dott. Angelo Lucio Silvino</span><span class=\'block text-xs text-brand-sage font-medium tracking-wide\'>Psicologo</span></div>';">
                     <div class="hidden sm:block">
-                        <span class="block font-serif text-lg font-semibold text-brand-dark leading-tight">
-                            Dott. Angelo Lucio Silvino
-                        </span>
-
-                        <span class="block text-xs text-brand-sage font-medium tracking-wide">
-                            Psicologo
-                        </span>
+                        <span class="block font-serif text-lg font-semibold text-brand-dark leading-tight">Dott. Angelo Lucio Silvino</span>
+                        <span class="block text-xs text-brand-sage font-medium tracking-wide">Psicologo</span>
                     </div>
                 </a>
 
-
-                <!-- Navigazione Desktop -->
-                <nav
-                    class="hidden lg:flex items-center space-x-6 font-medium text-sm text-brand-dark/80"
-                    aria-label="Navigazione principale">
-
-                    <a href="#chi-sono" class="hover:text-brand-sage transition-colors">
-                        Chi Sono
-                    </a>
-
-                    <a href="#servizi" class="hover:text-brand-sage transition-colors">
-                        Aree d'Intervento
-                    </a>
-
-                    <a href="#approccio" class="hover:text-brand-sage transition-colors">
-                        Metodo
-                    </a>
-
-                    <a href="#vr" class="hover:text-brand-sage transition-colors">
-                        Realtà Virtuale
-                    </a>
-
-                    <a href="#faq" class="hover:text-brand-sage transition-colors">
-                        FAQ
-                    </a>
-
-                    <a
-                        href="https://www.linkedin.com/in/angelo-lucio-silvino/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="text-brand-sage hover:text-brand-dark transition-colors text-base"
-                        title="Profilo LinkedIn">
-                        <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
-                        <span class="sr-only">Profilo LinkedIn</span>
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden lg:flex items-center space-x-6 font-medium text-sm text-brand-dark/80">
+                    <a href="#chi-sono" class="hover:text-brand-sage transition-colors">Chi Sono</a>
+                    <a href="#servizi" class="hover:text-brand-sage transition-colors">Aree d'Intervento</a>
+                    <a href="#approccio" class="hover:text-brand-sage transition-colors">Metodo</a>
+                    <a href="#vr" class="hover:text-brand-sage transition-colors">Realtà Virtuale</a>
+                    <a href="#faq" class="hover:text-brand-sage transition-colors">FAQ</a>
+                    <!-- Link LinkedIn Header -->
+                    <a href="https://www.linkedin.com/in/angelo-lucio-silvino/" target="_blank" rel="noopener noreferrer" class="text-brand-sage hover:text-brand-dark transition-colors text-base" title="Profilo LinkedIn">
+                        <i class="fa-brands fa-linkedin"></i>
                     </a>
                 </nav>
 
-
-                <!-- CTA Desktop -->
+                <!-- CTA Button Header -->
                 <div class="hidden sm:flex items-center">
-
-                    <a
-                        href="#contatti"
-                        class="inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-brand-sage text-white font-medium text-sm hover:bg-brand-sage/90 shadow-sm hover:shadow-md transition-all">
-
-                        <i class="fa-regular fa-calendar-check mr-2" aria-hidden="true"></i>
-                        Prenota un Colloquio
+                    <a href="#contatti" class="inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-brand-sage text-white font-medium text-sm hover:bg-brand-sage/90 shadow-sm hover:shadow-md transition-all">
+                        <i class="fa-regular font-normal fa-calendar-check mr-2"></i> Prenota un Colloquio
                     </a>
-
                 </div>
 
-
-                <!-- Menu Mobile -->
+                <!-- Mobile Menu Button -->
                 <div class="flex lg:hidden">
-
-                    <button
-                        id="mobile-menu-btn"
-                        type="button"
-                        class="p-2 rounded-md text-brand-dark hover:text-brand-sage focus:outline-none"
-                        aria-label="Apri menu di navigazione"
-                        aria-expanded="false">
-
-                        <i class="fa-solid fa-bars text-xl" id="menu-icon" aria-hidden="true"></i>
+                    <button id="mobile-menu-btn" type="button" class="p-2 rounded-md text-brand-dark hover:text-brand-sage focus:outline-none" aria-label="Menu">
+                        <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
                     </button>
-
                 </div>
-
             </div>
         </div>
 
-
-        <!-- Navigazione Mobile -->
-        <div
-            id="mobile-menu"
-            class="hidden lg:hidden bg-brand-softwhite border-b border-brand-sage/10 px-4 pt-2 pb-6 space-y-3">
-
-            <a href="#chi-sono" class="block px-3 py-2 rounded-lg text-base font-medium text-brand-dark hover:bg-brand-cream hover:text-brand-sage">
-                Chi Sono
+        <!-- Mobile Navigation Drawer -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-brand-softwhite border-b border-brand-sage/10 px-4 pt-2 pb-6 space-y-3">
+            <a href="#chi-sono" class="block px-3 py-2 rounded-lg text-base font-medium text-brand-dark hover:bg-brand-cream hover:text-brand-sage">Chi Sono</a>
+            <a href="#servizi" class="block px-3 py-2 rounded-lg text-base font-medium text-brand-dark hover:bg-brand-cream hover:text-brand-sage">Aree d'Intervento</a>
+            <a href="#approccio" class="block px-3 py-2 rounded-lg text-base font-medium text-brand-dark hover:bg-brand-cream hover:text-brand-sage">Metodo</a>
+            <a href="#vr" class="block px-3 py-2 rounded-lg text-base font-medium text-brand-dark hover:bg-brand-cream hover:text-brand-sage">Realtà Virtuale e Tecnologie</a>
+            <a href="#faq" class="block px-3 py-2 rounded-lg text-base font-medium text-brand-dark hover:bg-brand-cream hover:text-brand-sage">FAQ</a>
+            <a href="https://www.linkedin.com/in/angelo-lucio-silvino/" target="_blank" rel="noopener noreferrer" class="block px-3 py-2 rounded-lg text-base font-medium text-brand-sage hover:bg-brand-cream">
+                <i class="fa-brands fa-linkedin mr-2"></i> Profilo LinkedIn
             </a>
-
-            <a href="#servizi" class="block px-3 py-2 rounded-lg text-base font-medium text-brand-dark hover:bg-brand-cream hover:text-brand-sage">
-                Aree d'Intervento
-            </a>
-
-            <a href="#approccio" class="block px-3 py-2 rounded-lg text-base font-medium text-brand-dark hover:bg-brand-cream hover:text-brand-sage">
-                Metodo
-            </a>
-
-            <a href="#vr" class="block px-3 py-2 rounded-lg text-base font-medium text-brand-dark hover:bg-brand-cream hover:text-brand-sage">
-                Realtà Virtuale e Tecnologie Digitali
-            </a>
-
-            <a href="#faq" class="block px-3 py-2 rounded-lg text-base font-medium text-brand-dark hover:bg-brand-cream hover:text-brand-sage">
-                FAQ
-            </a>
-
-            <a
-                href="https://www.linkedin.com/in/angelo-lucio-silvino/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="block px-3 py-2 rounded-lg text-base font-medium text-brand-sage hover:bg-brand-cream">
-
-                <i class="fa-brands fa-linkedin mr-2" aria-hidden="true"></i>
-                Profilo LinkedIn
-            </a>
-
-            <a
-                href="#contatti"
-                class="block w-full text-center px-4 py-3 rounded-xl bg-brand-sage text-white font-medium shadow">
-
-                Prenota un Colloquio
-            </a>
+            <a href="#contatti" class="block w-full text-center px-4 py-3 rounded-xl bg-brand-sage text-white font-medium shadow">Prenota un Colloquio</a>
         </div>
     </header>
 
-
-    <!-- HERO -->
-    <main>
-
-        <section class="relative overflow-hidden hero-bg py-12 lg:py-24">
-
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-
-                    <div class="lg:col-span-7 space-y-6 lg:space-y-8 text-center lg:text-left">
-
-                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-sage/10 border border-brand-sage/20 text-brand-sage text-xs font-semibold tracking-wide uppercase">
-
-                            <span class="w-2 h-2 rounded-full bg-brand-sage animate-pulse"></span>
-
-                            Servizi e Percorsi Online
-
-                        </div>
-
-
-                        <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-brand-dark leading-[1.15]">
-
-                            Uno spazio professionale per
-                            <span class="text-brand-sage underline decoration-brand-honey/60 decoration-wavy decoration-2">
-                                affrontare
-                            </span>
-                            le
-                            <span class="text-brand-sage underline decoration-brand-honey/60 decoration-wavy decoration-2">
-                                difficoltà
-                            </span>,
-                            <span class="text-brand-sage underline decoration-brand-honey/60 decoration-wavy decoration-2">
-                                comprendere
-                            </span>
-                            e
-                            <span class="text-brand-sage underline decoration-brand-honey/60 decoration-wavy decoration-2">
-                                crescere
-                            </span>.
-                        </h1>
-
-
-                        <p class="text-base sm:text-xl text-brand-muted max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed text-justify sm:text-left">
-
-                            Sono il <strong>Dott. Angelo Lucio Silvino, Psicologo</strong>, e offro
-                            percorsi online di <strong>psicologia clinica, neurosviluppo e neuropsicologia dell’adulto</strong>,
-                            insieme a percorsi di <strong>formazione professionale</strong>, pensati in base alle tue esigenze.
-
-                        </p>
-
-
-                        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-
-                            <a
-                                href="#contatti"
-                                class="w-full sm:w-auto px-8 py-4 rounded-full bg-brand-sage text-white font-semibold text-base hover:bg-brand-sage/90 shadow-lg shadow-brand-sage/20 hover:shadow-xl transition-all text-center">
-
-                                Prenota il Primo Colloquio
-                            </a>
-
-                            <a
-                                href="#servizi"
-                                class="w-full sm:w-auto px-8 py-4 rounded-full bg-brand-softwhite border border-brand-sage/20 text-brand-dark font-semibold text-base hover:bg-brand-cream transition-all text-center">
-
-                                Scopri le Aree d'Intervento
-                            </a>
-
-                        </div>
-
-
-                        <div class="pt-6 border-t border-brand-sage/10 grid grid-cols-2 gap-4 max-w-md text-center lg:text-left">
-
-                            <div>
-                                <p class="font-serif font-bold text-lg sm:text-2xl text-brand-sage">
-                                    Ordine Psicologi
-                                </p>
-
-                                <p class="text-[11px] sm:text-xs text-brand-muted">
-                                    Professionista Iscritto
-                                </p>
-                            </div>
-
-                            <div>
-                                <p class="font-serif font-bold text-lg sm:text-2xl text-brand-sage">
-                                    Modalità Online
-                                </p>
-
-                                <p class="text-[11px] sm:text-xs text-brand-muted">
-                                    Comodamente da Casa
-                                </p>
-                            </div>
-
-                        </div>
-
+    <!-- Hero Section[cite: 2, 3] -->
+    <section class="relative overflow-hidden hero-bg py-12 lg:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Text Content -->
+                <div class="lg:col-span-7 space-y-6 lg:space-y-8 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-sage/10 border border-brand-sage/20 text-brand-sage text-xs font-semibold tracking-wide uppercase">
+                        <span class="w-2 h-2 rounded-full bg-brand-sage animate-pulse"></span>
+                        Servizi e Percorsi Online
                     </div>
-
-
-                    <!-- Immagine Hero -->
-                    <div class="lg:col-span-5 relative">
-
-                        <div class="relative mx-auto max-w-xs sm:max-w-md lg:max-w-none">
-
-                            <div class="absolute -top-6 -bottom-6 -left-6 -right-6 bg-gradient-to-tr from-brand-sage/20 via-brand-honey/20 to-transparent rounded-3xl transform rotate-2 blur-lg"></div>
-
-                            <div class="relative bg-brand-softwhite p-6 sm:p-8 rounded-3xl shadow-xl border border-brand-sage/10 text-center">
-
-                                <img
-                                    src="logo.png"
-                                    alt="Dott. Angelo Lucio Silvino, Psicologo"
-                                    class="w-full h-64 sm:h-80 object-contain mx-auto rounded-2xl"
-                                    onerror="this.onerror=null; this.src='https://placehold.co/800x800/4A7C59/FFFFFF?text=Dott.+Angelo+Lucio+Silvino';">
-
-                                <div class="absolute -bottom-4 -left-2 sm:-bottom-5 sm:-left-5 bg-brand-softwhite p-3 sm:p-4 rounded-2xl shadow-lg border border-brand-sage/10 flex items-center gap-3">
-
-                                    <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-brand-sage/10 flex items-center justify-center text-brand-sage text-lg sm:text-xl">
-                                        <i class="fa-solid fa-laptop" aria-hidden="true"></i>
-                                    </div>
-
-                                    <div>
-                                        <p class="text-xs sm:text-sm font-bold text-brand-dark">
-                                            Consulenza online
-                                        </p>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-
-        <!-- CHI SONO -->
-        <section id="chi-sono" class="py-16 sm:py-20">
-
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-
-                    <div class="lg:col-span-5">
-
-                        <div class="relative max-w-xs sm:max-w-md mx-auto lg:max-w-none">
-
-                            <div class="w-full h-80 sm:h-[480px] rounded-3xl overflow-hidden shadow-xl border-4 border-brand-softwhite">
-
-                                <img
-                                    src="foto-profilo.jpg"
-                                    alt="Dott. Angelo Lucio Silvino, Psicologo"
-                                    class="w-full h-full object-cover"
-                                    onerror="this.src='https://placehold.co/800x1000/4A7C59/FFFFFF?text=Dott.+Angelo+Lucio+Silvino'">
-
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="lg:col-span-7 space-y-6 mt-6 lg:mt-0">
-
-                        <span class="text-brand-sage font-semibold text-sm tracking-wider uppercase">
-                            Chi Sono
-                        </span>
-
-                        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-dark">
-                            Dott. Angelo Lucio Silvino
-                        </h2>
-
-                        <h3 class="text-lg font-medium text-brand-sage -mt-4">
-                            Psicologo
-                        </h3>
-
-
-                        <div class="space-y-4 text-brand-muted leading-relaxed text-sm sm:text-base text-justify">
-
-                            <p>
-                                Sono Angelo Lucio Silvino, <strong>Psicologo iscritto all’Ordine degli Psicologi della Regione Campania</strong>.
-                                Ho conseguito la <strong>Laurea Magistrale in Psicologia dei Processi Cognitivi</strong>
-                                presso l’Università degli Studi della Campania “Luigi Vanvitelli” e un
-                                <strong>Master di II livello in Neuropsicologia dell’Età Evolutiva e dei Disturbi dell’Apprendimento</strong>.
-                            </p>
-
-                            <p>
-                                Nel corso della mia formazione ho maturato esperienze in ambito clinico e neuropsicologico,
-                                lavorando con adulti, bambini e adolescenti. Ho svolto attività presso
-                                l’<strong>IRCCS ICS Maugeri di Telese Terme</strong> e presso l’<strong>Ospedale San Pio di Benevento</strong>,
-                                approfondendo in particolare la valutazione psicologica e neuropsicologica e le condizioni del neurosviluppo,
-                                tra cui condizioni dello spettro autistico, ADHD e Disturbi Specifici dell’Apprendimento (DSA).
-                            </p>
-
-                            <p>
-                                La mia formazione comprende anche un’esperienza internazionale di ricerca presso
-                                l’<strong>Università di Leiden</strong>, nei Paesi Bassi, dove ho lavorato con la
-                                <strong>Realtà Virtuale Immersiva</strong> nello studio dei processi cognitivi ed emotivi.
-                            </p>
-
-                            <p>
-                                Attualmente sono <strong>Dottorando di Ricerca in Scienze della Mente</strong>
-                                presso l’Università degli Studi della Campania “Luigi Vanvitelli”, dove utilizzo
-                                la Realtà Virtuale Immersiva per studiare il rapporto tra processi psicologici e ambiente.
-                                Ho inoltre maturato esperienza nella formazione di studenti di Psicologia, insegnando a progettare
-                                protocolli sperimentali per lo studio dei processi psicologici attraverso la Realtà Virtuale Immersiva.
-                            </p>
-
-                            <p>
-                                Il mio percorso unisce <strong>psicologia clinica, neuropsicologia, ricerca e formazione</strong>,
-                                con l’obiettivo di mettere le conoscenze psicologiche a disposizione delle persone e dei professionisti
-                                attraverso un approccio attento, rispettoso e basato sulle evidenze.
-                            </p>
-
-                            <p class="font-medium text-brand-dark pt-2">
-                                <strong>Offro percorsi psicologici online</strong> costruiti insieme alla persona,
-                                a partire dalle sue esigenze, dalle difficoltà che sta vivendo e dagli obiettivi che desidera raggiungere.
-                                Mi occupo inoltre di formazione e attività legate alla psicologia e alla Realtà Virtuale Immersiva.
-                            </p>
-
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-
-        <!-- AREE DI INTERVENTO -->
-        <section id="servizi" class="py-16 sm:py-20 bg-brand-softwhite">
-
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-                <div class="text-center max-w-3xl mx-auto mb-16">
-
-                    <span class="text-brand-sage font-semibold text-sm tracking-wider uppercase">
-                        Cosa può portarti a chiedere aiuto?
-                    </span>
-
-                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-dark mt-2">
-                        Aree d'Intervento
-                    </h2>
-
-                    <p class="text-brand-muted mt-3 text-sm sm:text-base">
-                        Situazioni concrete in cui potresti riconoscerti e su cui possiamo lavorare insieme online.
+                    <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-brand-dark leading-[1.15]">
+                        Uno spazio professionale per <span class="text-brand-sage underline decoration-brand-honey/60 decoration-wavy decoration-2">affrontare</span> le <span class="text-brand-sage underline decoration-brand-honey/60 decoration-wavy decoration-2">difficoltà</span>,
+                        <span class="text-brand-sage underline decoration-brand-honey/60 decoration-wavy decoration-2">comprendere</span> e
+                        <span class="text-brand-sage underline decoration-brand-honey/60 decoration-wavy decoration-2">crescere</span>.
+                    </h1>
+                    <p class="text-base sm:text-xl text-brand-muted max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed text-justify sm:text-left">
+                        Sono il <strong>Dott. Angelo Lucio Silvino, Psicologo</strong>, e offro percorsi online di psicologia clinica, neurosviluppo e neuropsicologia dell’adulto, insieme a percorsi di formazione professionale.
                     </p>
-
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="#contatti" class="w-full sm:w-auto px-8 py-4 rounded-full bg-brand-sage text-white font-semibold text-base hover:bg-brand-sage/90 shadow-lg shadow-brand-sage/20 hover:shadow-xl transition-all text-center">
+                            Prenota Primo Colloquio
+                        </a>
+                        <a href="#servizi" class="w-full sm:w-auto px-8 py-4 rounded-full bg-brand-softwhite border border-brand-sage/20 text-brand-dark font-semibold text-base hover:bg-brand-cream transition-all text-center">
+                            Scopri le Aree d'Intervento
+                        </a>
+                    </div>
+                    
+                    <!-- Trust badges -->
+                    <div class="pt-6 border-t border-brand-sage/10 grid grid-cols-2 gap-4 max-w-md text-center lg:text-left">
+                        <div>
+                            <p class="font-serif font-bold text-lg sm:text-2xl text-brand-sage">Ordine Psicologi</p>
+                            <p class="text-[11px] sm:text-xs text-brand-muted">Professionista Iscritto</p>
+                        </div>
+                        <div>
+                            <p class="font-serif font-bold text-lg sm:text-2xl text-brand-sage">Modalità Online</p>
+                            <p class="text-[11px] sm:text-xs text-brand-muted">Comodamente da Casa</p>
+                        </div>
+                    </div>
                 </div>
 
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-
-                    <!-- Psicologia clinica -->
-                    <div class="bg-brand-cream/60 p-6 sm:p-8 rounded-3xl border border-brand-sage/10 card-transition flex flex-col justify-between">
-
-                        <div>
-
-                            <div class="w-12 h-12 rounded-2xl bg-brand-sage text-white flex items-center justify-center text-xl mb-6 shadow-sm">
-                                <i class="fa-solid fa-comments" aria-hidden="true"></i>
+                <!-- Hero Image (Logo .png) -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-xs sm:max-w-md lg:max-w-none">
+                        <div class="absolute -top-6 -bottom-6 -left-6 -right-6 bg-gradient-to-tr from-brand-sage/20 via-brand-honey/20 to-transparent rounded-3xl transform rotate-2 blur-lg"></div>
+                        
+                        <div class="relative bg-brand-softwhite p-6 sm:p-8 rounded-3xl shadow-xl border border-brand-sage/10 text-center">
+                            <img src="logo.png" 
+                                 alt="Logo Dott. Angelo Lucio Silvino, Psicologo" 
+                                 class="w-full h-64 sm:h-80 object-contain mx-auto rounded-2xl"
+                                 onerror="this.onerror=null; this.src='https://placehold.co/800x800/4A7C59/FFFFFF?text=Dott.+Angelo+Lucio+Silvino';">
+                        
+                            <!-- Floating Badge -->
+                            <div class="absolute -bottom-4 -left-2 sm:-bottom-5 sm:-left-5 bg-brand-softwhite p-3 sm:p-4 rounded-2xl shadow-lg border border-brand-sage/10 flex items-center gap-3">
+                                <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-brand-sage/10 flex items-center justify-center text-brand-sage text-lg sm:text-xl">
+                                    <i class="fa-solid fa-laptop"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs sm:text-sm font-bold text-brand-dark">Consulenza online</p>
+                                </div>
                             </div>
-
-                            <h3 class="font-serif text-xl font-bold text-brand-dark mb-2">
-                                Psicologia clinica
-                            </h3>
-
-                            <p class="text-xs font-semibold text-brand-sage uppercase tracking-wider mb-4">
-                                Spazio di ascolto e supporto
-                            </p>
-
-                            <p class="text-brand-muted text-sm leading-relaxed mb-4 text-justify">
-                                Per chi sta attraversando un periodo di difficoltà e sente il bisogno di uno spazio protetto per elaborare il proprio vissuto:
-                            </p>
-
                         </div>
-
-                        <ul class="text-xs sm:text-sm text-brand-muted space-y-2.5 border-t border-brand-sage/10 pt-4">
-
-                            <li class="flex items-start gap-2.5">
-                                <i class="fa-solid fa-check text-brand-sage mt-1" aria-hidden="true"></i>
-                                <span>Ansia e preoccupazioni difficili da gestire</span>
-                            </li>
-
-                            <li class="flex items-start gap-2.5">
-                                <i class="fa-solid fa-check text-brand-sage mt-1" aria-hidden="true"></i>
-                                <span>Stress e forte senso di sovraccarico emotivo</span>
-                            </li>
-
-                            <li class="flex items-start gap-2.5">
-                                <i class="fa-solid fa-check text-brand-sage mt-1" aria-hidden="true"></i>
-                                <span>Difficoltà ad affrontare cambiamenti importanti o relazioni personali</span>
-                            </li>
-
-                            <li class="flex items-start gap-2.5">
-                                <i class="fa-solid fa-check text-brand-sage mt-1" aria-hidden="true"></i>
-                                <span>Insicurezza e difficoltà nella gestione delle proprie emozioni</span>
-                            </li>
-
-                            <li class="flex items-start gap-2.5">
-                                <i class="fa-solid fa-check text-brand-sage mt-1" aria-hidden="true"></i>
-                                <span>Momenti di blocco, demotivazione o difficoltà nel prendere decisioni</span>
-                            </li>
-
-                        </ul>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-
-                    <!-- Neurosviluppo -->
-                    <div class="bg-brand-cream/60 p-6 sm:p-8 rounded-3xl border border-brand-sage/10 card-transition flex flex-col justify-between">
-
-                        <div>
-
-                            <div class="w-12 h-12 rounded-2xl bg-brand-sage text-white flex items-center justify-center text-xl mb-6 shadow-sm">
-                                <i class="fa-solid fa-infinity" aria-hidden="true"></i>
-                            </div>
-
-                            <h3 class="font-serif text-xl font-bold text-brand-dark mb-2">
-                                Neurosviluppo
-                            </h3>
-
-                            <p class="text-xs font-semibold text-brand-sage uppercase tracking-wider mb-4">
-                                Per bambini, adolescenti e adulti
-                            </p>
-
-                            <p class="text-brand-muted text-sm leading-relaxed mb-4 text-justify">
-                                Difficoltà ed esperienze legate alle condizioni del neurosviluppo, come ADHD, spettro autistico o DSA, che possono influenzare la quotidianità:
-                            </p>
-
+    <!-- 1. Chi Sono / About Section[cite: 2, 3] -->
+    <section id="chi-sono" class="py-16 sm:py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Image Column (Foto Profilo) -->
+                <div class="lg:col-span-5">
+                    <div class="relative max-w-xs sm:max-w-md mx-auto lg:max-w-none">
+                        <div class="w-full h-80 sm:h-[480px] rounded-3xl overflow-hidden shadow-xl border-4 border-brand-softwhite">
+                            <img src="foto-profilo.jpg" 
+                                 alt="Dott. Angelo Lucio Silvino, Psicologo" 
+                                 class="w-full h-full object-cover"
+                                 onerror="this.src='https://placehold.co/800x1000/4A7C59/FFFFFF?text=Dott.+Angelo+Lucio+Silvino'">
                         </div>
-
-                        <ul class="text-xs sm:text-sm text-brand-muted space-y-2.5 border-t border-brand-sage/10 pt-4">
-
-                            <li class="flex items-start gap-2.5">
-                                <i class="fa-solid fa-check text-brand-sage mt-1" aria-hidden="true"></i>
-                                <span>Difficoltà di attenzione e concentrazione</span>
-                            </li>
-
-                            <li class="flex items-start gap-2.5">
-                                <i class="fa-solid fa-check text-brand-sage mt-1" aria-hidden="true"></i>
-                                <span>Difficoltà nell’organizzazione e gestione delle attività quotidiane</span>
-                            </li>
-
-                            <li class="flex items-start gap-2.5">
-                                <i class="fa-solid fa-check text-brand-sage mt-1" aria-hidden="true"></i>
-                                <span>Difficoltà nello studio, nell'apprendimento, nella lettura, nella scrittura o nel calcolo</span>
-                            </li>
-
-                            <li class="flex items-start gap-2.5">
-                                <i class="fa-solid fa-check text-brand-sage mt-1" aria-hidden="true"></i>
-                                <span>Difficoltà nella gestione dei tempi e delle consegne</span>
-                            </li>
-
-                            <li class="flex items-start gap-2.5">
-                                <i class="fa-solid fa-check text-brand-sage mt-1" aria-hidden="true"></i>
-                                <span>Difficoltà nelle relazioni e nella gestione delle situazioni sociali</span>
-                            </li>
-
-                        </ul>
                     </div>
+                </div>
 
+                <!-- Text Content Column -->
+                <div class="lg:col-span-7 space-y-6 mt-6 lg:mt-0">
+                    <span class="text-brand-sage font-semibold text-sm tracking-wider uppercase">Chi Sono</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-dark">Dott. Angelo Lucio Silvino</h2>
+                    <h3 class="text-lg font-medium text-brand-sage -mt-4">Psicologo Clinico</h3>
+                    
+                    <div class="space-y-4 text-brand-muted leading-relaxed text-sm sm:text-base text-justify">
+                        <p>
+                            Sono Angelo Lucio Silvino, Psicologo iscritto all’<strong>Ordine degli Psicologi della Regione Campania</strong>. Ho conseguito la <strong>Laurea Magistrale in Psicologia dei Processi Cognitivi</strong> presso l’Università degli Studi della Campania “Luigi Vanvitelli” e un <strong>Master di II livello in Neuropsicologia dell’Età Evolutiva e dei Disturbi dell’Apprendimento</strong>.
+                        </p>
+                        <p>
+                            Nel corso della mia formazione ho maturato esperienze in ambito clinico e neuropsicologico, lavorando con adulti, bambini e adolescenti. Ho svolto attività presso l’<strong>IRCCS ICS Maugeri di Telese Terme</strong> e presso l’<strong>Ospedale San Pio di Benevento</strong>, approfondendo in particolare la valutazione psicologica e neuropsicologica e le condizioni del neurosviluppo, tra cui condizioni dello spettro autistico, ADHD e Disturbi Specifici dell’Apprendimento (DSA).
+                        </p>
+                        <p>
+                            La mia formazione comprende anche un’esperienza internazionale di ricerca presso l’<strong>Università di Leiden</strong>, nei Paesi Bassi, dove ho lavorato con la <strong>Realtà Virtuale Immersiva</strong> nello studio dei processi cognitivi ed emotivi.
+                        </p>
+                        <p>
+                            Attualmente sono <strong>Dottorando di Ricerca in Scienze della Mente</strong> presso l’Università degli Studi della Campania “Luigi Vanvitelli”, dove utilizzo la Realtà Virtuale Immersiva per studiare il rapporto tra processi psicologici e ambiente. Ho inoltre maturato esperienza nella formazione di studenti di Psicologia, insegnando a progettare protocolli sperimentali per lo studio dei processi psicologici attraverso la Realtà Virtuale Immersiva.
+                        </p>
+                        <p>
+                            Il mio percorso unisce <strong>psicologia clinica, neuropsicologia, ricerca e formazione</strong>, con l’obiettivo di mettere le conoscenze psicologiche a disposizione delle persone e dei professionisti attraverso un approccio attento, rispettoso e basato sulle evidenze.
+                        </p>
+                        <p class="font-medium text-brand-dark pt-2">
+                            <strong>Offro percorsi psicologici online</strong> costruiti insieme alla persona, a partire dalle sue esigenze, dalle difficoltà che sta vivendo e dagli obiettivi che desidera raggiungere. Mi occupo inoltre di formazione e attività legate alla psicologia e alla Realtà Virtuale Immersiva.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                    <!-- Neuropsicologia dell'adulto -->
-                    <div class="bg-brand-cream/60 p-6 sm:p-8 rounded-3xl border border-brand-sage/10 card-transition flex flex-col justify-between">
+    <!-- 2. Aree di Intervento[cite: 2, 3] -->
+    <section id="servizi" class="py-16 sm:py-20 bg-brand-softwhite">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-sage font-semibold text-sm tracking-wider uppercase">Cosa può portarti a chiedere aiuto?</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-dark mt-2">Aree d'Intervento</h2>
+                <p class="text-brand-muted mt-3 text-sm sm:text-base">
+                    Situazioni concrete in cui potresti riconoscerti e su cui possiamo lavorare insieme online.
+                </p>
+            </div>
 
-                        <div>
-
-                            <div class="w-12 h-12 rounded-2xl bg-brand-sage text-white flex items-center justify-center text-xl mb-6 shadow-sm">
-                                <i class="fa-solid fa-brain" aria-hidden="true"></i>
-                            </div>
-
-                            <h3 class="font-serif text-xl font-bold text-brand-dark mb-2">
-                                Neuropsicologia dell’adulto
-                            </h3>
-
-                            <p class="text-xs font-semibold text-brand-sage uppercase tracking-wider mb-4">
-                                Per chi nota cambiamenti cognitivi
-                            </p>
-
-                            <p class="text-brand-muted text-sm leading-relaxed mb-4 text-justify">
-                                Supporto e valutazione per chi sperimenta cambiamenti o fatiche nelle proprie capacità cognitive nella vita di tutti i giorni:
-                            </p>
-
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- 1. Psicologia clinica -->
+                <div class="bg-brand-cream/60 p-6 sm:p-8 rounded-3xl border border-brand-sage/10 card-transition flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-brand-sage text-white flex items-center justify-center text-xl mb-6 shadow-sm">
+                            <i class="fa-solid fa-comments"></i>
                         </div>
+                        <h3 class="font-serif text-xl font-bold text-brand-dark mb-2">Psicologia clinica</h3>
+                        <p class="text-xs font-semibold text-brand-sage uppercase tracking-wider mb-4">Spazio di ascolto e supporto</p>
+                        <p class="text-brand-muted text-sm leading-relaxed mb-4 text-justify">
+                            Per chi sta attraversando un periodo di difficoltà e sente il bisogno di uno spazio protetto per elaborare il proprio vissuto:
+                        </p>
+                    </div>
+                    <ul class="text-xs sm:text-sm text-brand-muted space-y-2.5 border-t border-brand-sage/10 pt-4">
+                        <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-brand-sage mt-1"></i> <span>Ansia e preoccupazioni difficili da gestire</span></li>
+                        <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-brand-sage mt-1"></i> <span>Stress e forte senso di sovraccarico emotivo</span></li>
+                        <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-brand-sage mt-1"></i> <span>Difficoltà ad affrontare cambiamenti importanti o relazioni personali</span></li>
+                        <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-brand-sage mt-1"></i> <span>Insicurezza e difficoltà nella gestione delle proprie emozioni</span></li>
+                        <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-brand-sage mt-1"></i> <span>Momenti di blocco, demotivazione o difficoltà nel prendere decisioni</span></li>
+                    </ul>
+                </div>
 
-                        <ul class="text-xs sm:text-sm text-brand-muted space-y-2.5 border-t border-brand-sage/10 pt-4">
+                <!-- 2. Neurosviluppo -->
+                <div class="bg-brand-cream/60 p-6 sm:p-8 rounded-3xl border border-brand-sage/10 card-transition flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-brand-sage text-white flex items-center justify-center text-xl mb-6 shadow-sm">
+                            <i class="fa-solid fa-infinity"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-brand-dark mb-2">Neurosviluppo</h3>
+                        <p class="text-xs font-semibold text-brand-sage uppercase tracking-wider mb-4">Per bambini, adolescenti e adulti</p>
+                        <p class="text-brand-muted text-sm leading-relaxed mb-4 text-justify">
+                            Difficoltà ed esperienze legate alle condizioni del neurosviluppo (come ADHD, spettro autistico o DSA) che influenzano la quotidianità:
+                        </p>
+                    </div>
+                    <ul class="text-xs sm:text-sm text-brand-muted space-y-2.5 border-t border-brand-sage/10 pt-4">
+                        <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-brand-sage mt-1"></i> <span>Difficoltà di attenzione e concentrazione</span></li>
+                        <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-brand-sage mt-1"></i> <span>Difficoltà nell’organizzazione e gestione delle attività quotidiane</span></li>
+                        <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-brand-sage mt-1"></i> <span>Difficoltà nello studio, nell'apprendimento, lettura, scrittura o calcolo</span></li>
+                        <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-brand-sage mt-1"></i> <span>Difficoltà nella gestione dei tempi e delle consegne</span></li>
+                        <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-brand-sage mt-1"></i> <span>Difficoltà nelle relazioni e nella gestione delle situazioni sociali</span></li>
+                    </ul>
+                </div>
 
-                            <li class="flex items-start gap-2.5">
-                                <i class="fa-solid fa-check text-brand-sage mt-1" aria-hidden="true"></i>
-                                <span>Difficoltà di memoria, come dimenticare appuntamenti o cose da fare</span>
-                            </li>
+                <!-- 3. Neuropsicologia dell’adulto -->
+                <div class="bg-brand-cream/60 p-6 sm:p-8 rounded-3xl border border-brand-sage/10 card-transition flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-brand-sage text-white flex items-center justify-center text-xl mb-6 shadow-sm">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-brand-dark mb-2">Neuropsicologia dell’adulto</h3>
+                        <p class="text-xs font-semibold text-brand-sage uppercase tracking-wider mb-4">Per chi nota cambiamenti cognitivi</p>
+                        <p class="text-brand-muted text-sm leading-relaxed mb-4 text-justify">
+                            Supporto e valutazione per chi sperimenta cambiamenti o fatiche nelle proprie capacità cognitive nella vita di tutti i giorni:
+                        </p>
+                    </div>
+                    <ul class="text-xs sm:text-sm text-brand-muted space-y-2.5 border-t border-brand-sage/10 pt-4">
+                        <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-brand-sage mt-1"></i> <span>Difficoltà di memoria (dimenticare appuntamenti o cose da fare)</span></li>
+                        <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-brand-sage mt-1"></i> <span>Difficoltà a mantenere l’attenzione o a concentrarsi</span></li>
+                        <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-brand-sage mt-1"></i> <span>Maggiore fatica nelle attività che richiedono più passaggi</span></li>
+                        <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-brand-sage mt-1"></i> <span>Difficoltà nel trovare le parole o nel seguire una conversazione</span></li>
+                        <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-brand-sage mt-1"></i> <span>Cambiamenti cognitivi dopo una malattia o un evento neurologico</span></li>
+                    </ul>
+                </div>
 
-                            <li class="flex items-start gap-2.5">
-                                <i class="fa-solid fa-check text-brand-sage mt-1" aria-hidden="true"></i>
-                                <span>Difficoltà a mantenere l’attenzione o a concentrarsi</span>
-                            </li>
+                <!-- 4. Formazione professionale -->
+                <div class="bg-brand-cream/60 p-6 sm:p-8 rounded-3xl border border-brand-sage/10 card-transition flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-brand-sage text-white flex items-center justify-center text-xl mb-6 shadow-sm">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-brand-dark mb-2">Formazione professionale</h3>
+                        <p class="text-xs font-semibold text-brand-sage uppercase tracking-wider mb-4">Per studenti, tirocinanti e professionisti</p>
+                        <p class="text-brand-muted text-sm leading-relaxed mb-4 text-justify">
+                            Percorsi di crescita professionale, supervisione e aggiornamento teorico-pratico dedicati a chi opera o si forma nel settore psicologico e sanitario:
+                        </p>
+                    </div>
+                    <ul class="text-xs sm:text-sm text-brand-muted space-y-2.5 border-t border-brand-sage/10 pt-4">
+                        <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-brand-sage mt-1"></i> <span>Percorsi di orientamento e supporto alla formazione specialistica</span></li>
+                        <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-brand-sage mt-1"></i> <span>Approfondimento su strumenti di valutazione e intervento</span></li>
+                        <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-brand-sage mt-1"></i> <span>Incontri di aggiornamento e discussione di casi clinici</span></li>
+                        <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-brand-sage mt-1"></i> <span>Consulenza metodologica per lo sviluppo di progetti di ricerca</span></li>
+                        <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-brand-sage mt-1"></i> <span>Uso di tecnologie innovative e digitali nella pratica psicologica</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                            <li class="flex items-start gap-2.5">
-                                <i class="fa-solid fa-check text-brand-sage mt-1" aria-hidden="true"></i>
-                                <span>Maggiore fatica nelle attività che richiedono più passaggi</span>
-                            </li>
+    <!-- 3. Metodo[cite: 2, 3] -->
+    <section id="approccio" class="py-16 sm:py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-sage font-semibold text-sm tracking-wider uppercase">Un percorso strutturato e flessibile</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-dark mt-2">Come Funziona il Mio Metodo</h2>
+                <p class="text-brand-muted mt-3 text-sm sm:text-base">
+                    Un approccio basato sulle evidenze scientifiche e centrato sulla persona,<br>articolato in passaggi condivisi per rispondere al meglio alle tue esigenze.
+                </p>
+            </div>
 
-                            <li class="flex items-start gap-2.5">
-                                <i class="fa-solid
-```
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
+                <div class="bg-brand-softwhite p-6 rounded-2xl border border-brand-sage/10 relative shadow-sm">
+                    <span class="w-10 h-10 rounded-full bg-brand-cream border border-brand-sage/20 text-brand-sage font-bold flex items-center justify-center mb-4 text-base">01</span>
+                    <h3 class="font-bold text-lg text-brand-dark mb-2">1. Accoglienza &amp; Ascolto</h3>
+                    <p class="text-xs text-brand-muted leading-relaxed text-justify">
+                        Il primo colloquio online rappresenta lo spazio iniziale dedicato all'ascolto attivo delle tue necessità, della tua storia e degli obiettivi che desideri raggiungere.
+                    </p>
+                </div>
+
+                <div class="bg-brand-softwhite p-6 rounded-2xl border border-brand-sage/10 relative shadow-sm">
+                    <span class="w-10 h-10 rounded-full bg-brand-cream border border-brand-sage/20 text-brand-sage font-bold flex items-center justify-center mb-4 text-base">02</span>
+                    <h3 class="font-bold text-lg text-brand-dark mb-2">2. Analisi &amp; Condivisione</h3>
+                    <p class="text-xs text-brand-muted leading-relaxed text-justify">
+                        Analizziamo insieme le difficoltà emerse, concordando in modo trasparente la direzione del percorso più adatta, sia esso di supporto, valutazione o formazione.
+                    </p>
+                </div>
+
+                <div class="bg-brand-softwhite p-6 rounded-2xl border border-brand-sage/10 relative shadow-sm">
+                    <span class="w-10 h-10 rounded-full bg-brand-cream border border-brand-sage/20 text-brand-sage font-bold flex items-center justify-center mb-4 text-base">03</span>
+                    <h3 class="font-bold text-lg text-brand-dark mb-2">3. Lavoro Attivo</h3>
+                    <p class="text-xs text-brand-muted leading-relaxed text-justify">
+                        Attraverso incontri cadenzati, applichiamo strategie pratiche, strumenti clinici o protocolli metodologici mirati a favorire il cambiamento e l'acquisizione di nuove risorse.
+                    </p>
+                </div>
+
+                <div class="bg-brand-softwhite p-6 rounded-2xl border border-brand-sage/10 relative shadow-sm">
+                    <span class="w-10 h-10 rounded-full bg-brand-cream border border-brand-sage/20 text-brand-sage font-bold flex items-center justify-center mb-4 text-base">04</span>
+                    <h3 class="font-bold text-lg text-brand-dark mb-2">4. Monitoraggio &amp; Crescita</h3>
+                    <p class="text-xs text-brand-muted leading-relaxed text-justify">
+                        Verifichiamo costantemente i progressi compiuti per consolidare le competenze acquisite, promuovendo l'autonomia e il benessere a lungo termine.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Realtà Virtuale (VR), Realtà Aumentata (AR) e Tecnologie Digitali Section[cite: 2, 3] -->
+    <section id="vr" class="py-16 sm:py-20 bg-brand-softwhite border-y border-brand-sage/10">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+            <div class="text-center max-w-2xl mx-auto space-y-3">
+                <span class="text-brand-sage font-semibold text-sm tracking-wider uppercase">Innovazione e Tecnologie Digitali</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-dark">Realtà Virtuale (VR), Realtà Aumentata (AR) e Tecnologie Digitali</h2>
+            </div>
+
+            <div class="bg-brand-cream/60 p-6 sm:p-8 rounded-3xl border border-brand-sage/10 space-y-4 text-brand-muted text-sm leading-relaxed text-justify">
+                <p>
+                    La <strong>Realtà Virtuale (VR)</strong> permette di interagire con ambienti tridimensionali digitali tramite visori dedicati, mentre la <strong>Realtà Aumentata (AR)</strong> integra elementi digitali all’interno dell’ambiente reale attraverso dispositivi compatibili, come smartphone e tablet.
+                </p>
+                <p>
+                    L’utilizzo di queste tecnologie può essere integrato, quando appropriato, all’interno di percorsi psicologici, attività formative e consulenze, attraverso esperienze interattive ed esercizi progettati in funzione degli obiettivi del percorso.
+                </p>
+                
+                <ul class="list-disc pl-6 space-y-3 my-4">
+                    <li><strong>Utilizzo di app e strumenti digitali:</strong> è possibile utilizzare app e strumenti digitali tramite smartphone, tablet o, per alcune attività, visori personali. Gli strumenti possono essere selezionati e, quando possibile, personalizzati in relazione agli obiettivi del percorso e utilizzati come supporto per attività di psicoeducazione, esercizi e attività digitali strutturate, durante gli incontri o, quando previsto, anche autonomamente.</li>
+                    <li><strong>Formazione e progettazione metodologica:</strong> consulenza e supporto teorico-pratico rivolti a studenti e professionisti interessati all’utilizzo della VR, dell’AR e di altre tecnologie digitali nella pratica psicologica, nella formazione e nella progettazione di attività e protocolli.</li>
+                </ul>
+
+                <p class="text-xs italic">
+                    <strong>Nota:</strong> l’eventuale acquisto o abbonamento alle app e agli strumenti digitali utilizzati nel percorso <strong>non è incluso nel costo della consulenza</strong>. Per chi fosse interessato, verrà fornito un <strong>listino con i relativi costi e le modalità di acquisto</strong>.
+                </p>
+
+                <!-- Riferimenti bibliografici -->
+                <div class="pt-4 border-t border-brand-sage/10 text-xs text-brand-muted space-y-1">
+                    <p class="font-semibold text-brand-dark">Approfondimenti scientifici</p>
+                    <p>- Parsons, T. D. (2015). <em>Virtual reality for enhanced ecological validity and experimental control in the clinical neurosciences</em>. <em>Frontiers in Human Neuroscience, 9</em>, 660.</p>
+                    <p>- Freeman, D., et al. (2018). <em>Virtual reality in the assessment, understanding, and treatment of mental health disorders</em>. <em>Psychological Medicine, 48</em>(14), 2393–2400.</p>
+                    <p>- Rizzo, A., &amp; Shilling, R. (2017). <em>Clinical virtual reality: tools to map, assess, and treat human behavior</em>. <em>Current Opinion in Psychology, 15</em>, 18–26.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. FAQ (Domande Frequenti) Section[cite: 2, 3] -->
+    <section id="faq" class="py-16 sm:py-20 bg-brand-cream">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-sage font-semibold text-sm tracking-wider uppercase">Dubbi o chiarimenti</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-dark mt-2">Domande Frequenti (FAQ)</h2>
+                <p class="text-brand-muted mt-3 text-sm sm:text-base">
+                    Risposte alle domande più comuni sul percorso psicologico online e sulle modalità di prenotazione.
+                </p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="bg-brand-softwhite rounded-2xl border border-brand-sage/10 overflow-hidden shadow-sm">
+                    <button class="faq-btn w-full text-left p-6 font-semibold text-brand-dark flex justify-between items-center focus:outline-none">
+                        <span>Come si svolgono i colloqui psicologici online?</span>
+                        <i class="fa-solid fa-chevron-down text-brand-sage transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-brand-muted text-sm leading-relaxed text-justify border-t border-brand-sage/5 pt-4">
+                        I colloqui si svolgono a distanza tramite piattaforme di videochiamata sicure e conformi alle normative sulla privacy. Ti basterà un dispositivo (pc, tablet o smartphone), una connessione stabile e un luogo tranquillo e riservato in cui poterti collegare comodamente.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-brand-softwhite rounded-2xl border border-brand-sage/10 overflow-hidden shadow-sm">
+                    <button class="faq-btn w-full text-left p-6 font-semibold text-brand-dark flex justify-between items-center focus:outline-none">
+                        <span>Quanto dura un colloquio e con quale frequenza si tengono?</span>
+                        <i class="fa-solid fa-chevron-down text-brand-sage transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-brand-muted text-sm leading-relaxed text-justify border-t border-brand-sage/5 pt-4">
+                        Generalmente la seduta ha una durata di circa 50-60 minuti. La frequenza degli incontri (settimanale o quindicinale) viene concordata insieme durante il primo colloquio, in base alle tue specifiche esigenze e agli obiettivi definiti.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-brand-softwhite rounded-2xl border border-brand-sage/10 overflow-hidden shadow-sm">
+                    <button class="faq-btn w-full text-left p-6 font-semibold text-brand-dark flex justify-between items-center focus:outline-none">
+                        <span>Come posso prenotare un appuntamento?</span>
+                        <i class="fa-solid fa-chevron-down text-brand-sage transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-brand-muted text-sm leading-relaxed text-justify border-t border-brand-sage/5 pt-4">
+                        Puoi prenotare in autonomia direttamente dal calendario interattivo presente in fondo alla pagina (sezione Contatti). Scegli il giorno e l'orario disponibile che preferisci e riceverai subito la conferma via email.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="bg-brand-softwhite rounded-2xl border border-brand-sage/10 overflow-hidden shadow-sm">
+                    <button class="faq-btn w-full text-left p-6 font-semibold text-brand-dark flex justify-between items-center focus:outline-none">
+                        <span>I percorsi di consulenza online sono efficaci quanto quelli in presenza?</span>
+                        <i class="fa-solid fa-chevron-down text-brand-sage transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-brand-muted text-sm leading-relaxed text-justify border-t border-brand-sage/5 pt-4">
+                        Diversi studi scientifici e le linee guida internazionali in materia di telepsicologia (come le raccomandazioni dell'<em>American Psychological Association - APA</em>) evidenziano che la consulenza e il supporto psicologico erogati tramite videochiamata mantengono un'efficacia analoga ai colloqui in presenza, garantendo al contempo una maggiore flessibilità logistica, l'azzeramento dei tempi di spostamento e la possibilità di usufruire del proprio ambiente domestico in totale sicurezza.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sezione di Chiusura / Call to Action[cite: 2, 3] -->
+    <section class="py-16 bg-brand-sage/5 border-b border-brand-sage/10 text-center">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+            <span class="text-brand-sage font-semibold text-sm tracking-wider uppercase">Inizia il tuo percorso</span>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-brand-dark">Uno spazio di consulenza, valutazione e formazione online</h2>
+            <p class="text-brand-muted text-sm sm:text-base text-justify sm:text-center leading-relaxed">
+                Che tu stia affrontando un momento di difficoltà personale,<br>
+                fatiche cognitive legate al neurosviluppo o all'età adulta,<br>
+                o che tu voglia approfondire il tuo percorso di formazione professionale,<br>
+                puoi farlo in un contesto sicuro, strutturato e accessibile direttamente da remoto.
+            </p>
+            <div class="pt-4">
+                <a href="#contatti" class="inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-brand-sage text-white font-semibold text-sm hover:bg-brand-sage/90 shadow-md transition-all">
+                    <i class="fa-regular fa-calendar-check mr-2"></i> Prenota un Colloquio Online
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contatti[cite: 2, 3] -->
+    <footer id="contatti" class="bg-brand-dark text-white py-16 border-t border-brand-sage/25">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-12">
+                <div class="lg:col-span-5 space-y-6">
+                    <div>
+                        <span class="text-brand-honey font-semibold text-sm tracking-wider uppercase">Inizia il Tuo Percorso</span>
+                        <h3 class="font-serif text-3xl font-bold mt-2">Prenota il tuo Colloquio Online</h3>
+                        <p class="text-sm text-gray-300 mt-3 leading-relaxed text-justify">
+                            FAI IL PRIMO PASSO. Scegli il giorno e l'orario più comodo per te direttamente dal calendario interattivo oppure contattami per qualsiasi informazione.
+                        </p>
+                    </div>
+                    <div class="space-y-4 text-sm text-gray-300">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-brand-softwhite/10 flex items-center justify-center text-brand-honey">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-400">Email di Contatto</p>
+                                <a href="mailto:angeloluciosilvino@gmail.com" class="font-medium text-white hover:underline">angeloluciosilvino@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 bg-brand-softwhite/5 p-4 sm:p-6 rounded-3xl border border-white/10 shadow-xl">
+                    <h4 class="font-serif text-xl font-bold mb-4 flex items-center gap-2 text-white">
+                        <i class="fa-regular fa-calendar-days text-brand-honey"></i> Scegli il tuo appuntamento
+                    </h4>
+                    <!-- Calendly con colore primario rinforzato per visibilità dei giorni prenotabili -->
+                    <div class="calendly-inline-widget" data-url="https://calendly.com/angeloluciosilvino/30min?hide_landing_page_details=1&hide_gdpr_banner=1&background_color=faf8f5&text_color=2c3e50&primary_color=3B6E4A" style="min-width:320px;height:630px;"></div>
+                </div>
+            </div>
+
+            <!-- Footer inferiore con LinkedIn al centro -->
+            <div class="pt-8 border-t border-white/10 flex flex-col items-center justify-center text-center text-xs text-gray-400 gap-4">
+                <p>&copy; 2026 Dott. Angelo Lucio Silvino. Tutti i diritti riservati.</p>
+                <div class="space-y-1">
+                    <p class="text-gray-300 font-medium">Profilo Professionale</p>
+                    <a href="https://www.linkedin.com/in/angelo-lucio-silvino/" target="_blank" rel="noopener noreferrer" class="text-brand-honey hover:underline inline-flex items-center gap-1.5 font-medium text-sm">
+                        <i class="fa-brands fa-linkedin"></i> Visita LinkedIn
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script per Menu Mobile, Accordion FAQ e Widget Accessibilità -->
+    <script>
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if(mobileBtn && mobileMenu) {
+            mobileBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // Script per interattività delle FAQ
+        const faqBtns = document.querySelectorAll('.faq-btn');
+        faqBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.nextElementSibling;
+                
+                content.classList.toggle('hidden');
+                btn.parentElement.classList.toggle('border-brand-sage/40');
+                
+                // Rotazione icona freccia
+                const chevron = btn.querySelector('i');
+                if(chevron) {
+                    chevron.classList.toggle('rotate-180');
+                }
+            });
+        });
+
+        // --- Script Widget Accessibilità Esteso ---
+        const accessToggle = document.getElementById('accessibility-toggle');
+        const accessMenu = document.getElementById('accessibility-menu');
+        const accessClose = document.getElementById('accessibility-close');
+        
+        accessToggle.addEventListener('click', () => {
+            accessMenu.classList.toggle('hidden');
+        });
+        
+        accessClose.addEventListener('click', () => {
+            accessMenu.classList.add('hidden');
+        });
+
+        // Gestione zoom del testo
+        let currentZoom = 1;
+        const fontIncreaseBtn = document.getElementById('font-increase');
+        const fontResetBtn = document.getElementById('font-reset');
+
+        fontIncreaseBtn.addEventListener('click', () => {
+            if(currentZoom < 1.25) {
+                currentZoom += 0.1;
+                document.documentElement.style.fontSize = `${currentZoom * 100}%`;
+            }
+        });
+
+        fontResetBtn.addEventListener('click', () => {
+            currentZoom = 1;
+            document.documentElement.style.fontSize = '100%';
+            document.body.classList.remove('access-grayscale', 'access-high-contrast', 'access-links-highlight', 'access-readable-font');
+        });
+
+        // Scala di grigi
+        const toggleGrayscale = document.getElementById('toggle-grayscale');
+        toggleGrayscale.addEventListener('click', () => {
+            document.body.classList.toggle('access-grayscale');
+        });
+
+        // Contrasto elevato
+        const toggleContrast = document.getElementById('toggle-contrast');
+        toggleContrast.addEventListener('click', () => {
+            document.body.classList.toggle('access-high-contrast');
+        });
+
+        // Evidenzia link (Accessibilità Motoria/Cognitiva)
+        const toggleLinks = document.getElementById('toggle-links');
+        toggleLinks.addEventListener('click', () => {
+            document.body.classList.toggle('access-links-highlight');
+        });
+
+        // Font ad alta leggibilità (Accessibilità Cognitiva/Lettura)
+        const toggleReadableFont = document.getElementById('toggle-readable-font');
+        toggleReadableFont.addEventListener('click', () => {
+            document.body.classList.toggle('access-readable-font');
+        });
+    </script>
+</body>
+</html>
