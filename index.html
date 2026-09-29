@@ -35,6 +35,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Calendly Widget Script -->
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
     
     <script>
         tailwind.config = {
@@ -177,7 +179,7 @@
                     </div>
                 </div>
 
-                <!-- Hero Image (Logo .png) -->
+                <!-- Hero Image -->
                 <div class="lg:col-span-5 relative">
                     <div class="relative mx-auto max-w-xs sm:max-w-md lg:max-w-none">
                         <div class="absolute -top-6 -bottom-6 -left-6 -right-6 bg-gradient-to-tr from-brand-sage/20 via-brand-honey/20 to-transparent rounded-3xl transform rotate-2 blur-lg"></div>
@@ -209,7 +211,6 @@
     <section id="chi-sono" class="py-16 sm:py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                <!-- Image Column (Foto Profilo) -->
                 <div class="lg:col-span-5">
                     <div class="relative max-w-xs sm:max-w-md mx-auto lg:max-w-none">
                         <div class="w-full h-80 sm:h-[480px] rounded-3xl overflow-hidden shadow-xl border-4 border-brand-softwhite">
@@ -218,7 +219,6 @@
                                  class="w-full h-full object-cover"
                                  onerror="this.src='https://placehold.co/800x1000/4A7C59/FFFFFF?text=Dott.+Angelo+Lucio+Silvino'">
                         </div>
-                        <!-- Quote Badge -->
                         <div class="absolute -bottom-6 right-0 sm:-right-6 max-w-xs bg-brand-softwhite p-4 sm:p-5 rounded-2xl shadow-lg border border-brand-sage/10">
                             <p class="font-serif italic text-xs sm:text-sm text-brand-dark">
                                 "Ogni difficoltà racchiude in sé il seme di una nuova consapevolezza."
@@ -227,7 +227,6 @@
                     </div>
                 </div>
 
-                <!-- Text Content Column -->
                 <div class="lg:col-span-7 space-y-6 mt-6 lg:mt-0">
                     <span class="text-brand-sage font-semibold text-sm tracking-wider uppercase">Chi Sono</span>
                     <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-dark">Dott. Angelo Lucio Silvino</h2>
@@ -244,7 +243,6 @@
                         La mia formazione clinica e di ricerca si è arricchita di un'esperienza internazionale all'estero a <strong>Leiden</strong>, dove ho lavorato su progetti innovativi di Realtà Virtuale (VR) focalizzati sull'orientamento nello spazio, sui ricordi e sul legame profondo tra emozioni e memoria. Oggi unisco questa solida esperienza all'ascolto clinico per accompagnare i miei pazienti in percorsi di benessere online.
                     </p>
 
-                    <!-- Core Values Cards -->
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
                         <div class="p-4 rounded-xl bg-brand-softwhite border border-brand-sage/10 flex items-start gap-3">
                             <div class="w-8 h-8 rounded-lg bg-brand-sage/10 text-brand-sage flex items-center justify-center shrink-0 font-bold">
@@ -464,7 +462,7 @@
         </div>
     </section>
 
-    <!-- Sezione Blog -->
+    <!-- Sezione Blog con Articoli Cliccabili (Modale) -->
     <section id="blog" class="py-16 sm:py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
@@ -472,33 +470,59 @@
                 <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-dark mt-2">Dal Blog</h2>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <article class="bg-brand-softwhite p-6 rounded-3xl border border-brand-sage/10 shadow-sm flex flex-col justify-between">
+                <!-- Articolo 1 -->
+                <article class="bg-brand-softwhite p-6 rounded-3xl border border-brand-sage/10 shadow-sm flex flex-col justify-between card-transition cursor-pointer" onclick="openModal('blog-1')">
                     <div>
                         <span class="text-xs font-semibold text-brand-sage uppercase tracking-wider">Ansia &amp; Benessere</span>
                         <h3 class="font-serif text-xl font-bold text-brand-dark mt-2 mb-3">Come riconoscere e accogliere l'ansia quotidiana</h3>
                         <p class="text-brand-muted text-sm leading-relaxed mb-6">L'ansia non è solo un nemico da combattere, ma spesso un segnale d'allarme.</p>
                     </div>
-                    <span class="text-xs text-brand-muted font-medium">Lettura: 4 min</span>
+                    <div class="flex items-center justify-between border-t border-brand-sage/10 pt-4">
+                        <span class="text-xs text-brand-muted font-medium">Lettura: 4 min</span>
+                        <span class="text-xs font-semibold text-brand-sage hover:underline flex items-center gap-1">Leggi di più <i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
                 </article>
-                <article class="bg-brand-softwhite p-6 rounded-3xl border border-brand-sage/10 shadow-sm flex flex-col justify-between">
+
+                <!-- Articolo 2 -->
+                <article class="bg-brand-softwhite p-6 rounded-3xl border border-brand-sage/10 shadow-sm flex flex-col justify-between card-transition cursor-pointer" onclick="openModal('blog-2')">
                     <div>
                         <span class="text-xs font-semibold text-brand-sage uppercase tracking-wider">Tecnologia &amp; Mente</span>
                         <h3 class="font-serif text-xl font-bold text-brand-dark mt-2 mb-3">Realtà Virtuale e Psicologia: come funziona l'immersione</h3>
                         <p class="text-brand-muted text-sm leading-relaxed mb-6">Un viaggio alla scoperta di come gli strumenti digitali supportano i percorsi clinici.</p>
                     </div>
-                    <span class="text-xs text-brand-muted font-medium">Lettura: 5 min</span>
+                    <div class="flex items-center justify-between border-t border-brand-sage/10 pt-4">
+                        <span class="text-xs text-brand-muted font-medium">Lettura: 5 min</span>
+                        <span class="text-xs font-semibold text-brand-sage hover:underline flex items-center gap-1">Leggi di più <i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
                 </article>
-                <article class="bg-brand-softwhite p-6 rounded-3xl border border-brand-sage/10 shadow-sm flex flex-col justify-between">
+
+                <!-- Articolo 3 -->
+                <article class="bg-brand-softwhite p-6 rounded-3xl border border-brand-sage/10 shadow-sm flex flex-col justify-between card-transition cursor-pointer" onclick="openModal('blog-3')">
                     <div>
                         <span class="text-xs font-semibold text-brand-sage uppercase tracking-wider">Crescita Personale</span>
                         <h3 class="font-serif text-xl font-bold text-brand-dark mt-2 mb-3">L'importanza dei confini sani nelle relazioni</h3>
                         <p class="text-brand-muted text-sm leading-relaxed mb-6">Definire i propri confini personali per proteggere lo spazio emotivo.</p>
                     </div>
-                    <span class="text-xs text-brand-muted font-medium">Lettura: 4 min</span>
+                    <div class="flex items-center justify-between border-t border-brand-sage/10 pt-4">
+                        <span class="text-xs text-brand-muted font-medium">Lettura: 4 min</span>
+                        <span class="text-xs font-semibold text-brand-sage hover:underline flex items-center gap-1">Leggi di più <i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
                 </article>
             </div>
         </div>
     </section>
+
+    <!-- Modale per la Lettura degli Articoli del Blog -->
+    <div id="blog-modal" class="fixed inset-0 z-50 hidden bg-brand-dark/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-brand-softwhite w-full max-w-2xl rounded-3xl shadow-2xl p-6 sm:p-8 relative max-h-[90vh] overflow-y-auto">
+            <button onclick="closeModal()" class="absolute top-6 right-6 w-10 h-10 rounded-full bg-brand-cream flex items-center justify-center text-brand-dark hover:bg-brand-sage hover:text-white transition-all">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+            <div id="modal-content" class="space-y-4">
+                <!-- Contenuto dinamico inserito via JS -->
+            </div>
+        </div>
+    </div>
 
     <!-- Sezione FAQ -->
     <section id="faq" class="py-16 sm:py-20 bg-brand-softwhite border-t border-brand-sage/10">
@@ -520,17 +544,17 @@
         </div>
     </section>
 
-    <!-- Footer / Sezione Contatti con Calendario e Analytics -->
+    <!-- Footer / Sezione Contatti con Calendario Calendly Integrato & Analytics -->
     <footer id="contatti" class="bg-brand-dark text-white py-16 border-t border-brand-sage/25">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-12">
                 <!-- Info di Contatto -->
-                <div class="lg:col-span-6 space-y-6">
+                <div class="lg:col-span-5 space-y-6">
                     <div>
                         <span class="text-brand-honey font-semibold text-sm tracking-wider uppercase">Inizia il Tuo Percorso</span>
                         <h3 class="font-serif text-3xl font-bold mt-2">Prenota il tuo Colloquio Online</h3>
                         <p class="text-sm text-gray-300 mt-3 leading-relaxed">
-                            FAI IL PRIMO PASSO. Scegli il giorno e l'orario più comodo per te direttamente dal calendario sottostante oppure contattami per qualsiasi informazione.
+                            FAI IL PRIMO PASSO. Scegli il giorno e l'orario più comodo per te direttamente dal calendario interattivo oppure contattami per qualsiasi informazione.
                         </p>
                     </div>
 
@@ -556,23 +580,14 @@
                     </div>
                 </div>
 
-                <!-- Box Calendario / Prenotazione -->
-                <div class="lg:col-span-6 bg-brand-softwhite/5 p-6 sm:p-8 rounded-3xl border border-white/10 shadow-xl">
-                    <h4 class="font-serif text-xl font-bold mb-4 flex items-center gap-2">
-                        <i class="fa-regular fa-calendar-days text-brand-honey"></i> Calendario Prenotazioni
+                <!-- Box Calendario Calendly Incorporato -->
+                <div class="lg:col-span-7 bg-brand-softwhite/5 p-4 sm:p-6 rounded-3xl border border-white/10 shadow-xl">
+                    <h4 class="font-serif text-xl font-bold mb-4 flex items-center gap-2 text-white">
+                        <i class="fa-regular fa-calendar-days text-brand-honey"></i> Scegli il tuo appuntamento
                     </h4>
-                    <p class="text-xs text-gray-300 mb-6 leading-relaxed">
-                        Seleziona uno slot disponibile per fissare il tuo primo colloquio online in totale riservatezza.
-                    </p>
-                    <!-- Integrazione Calendly o Widget Prenotazione -->
-                    <div class="bg-brand-softwhite/10 p-6 rounded-2xl text-center border border-dashed border-white/20">
-                        <i class="fa-solid fa-clock text-brand-honey text-2xl mb-2"></i>
-                        <p class="text-sm font-medium text-white mb-2">Disponibilità Online</p>
-                        <p class="text-xs text-gray-300 mb-4">Colloqui protetti da remoto su piattaforma dedicata.</p>
-                        <a href="https://calendly.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-3 rounded-full bg-brand-honey text-brand-dark font-semibold text-xs hover:bg-brand-honey/90 transition-all shadow-md">
-                            Apri Calendario Appuntamenti <i class="fa-solid fa-arrow-right ml-2"></i>
-                        </a>
-                    </div>
+                    <!-- Calendly inline widget begin -->
+                    <div class="calendly-inline-widget" data-url="https://calendly.com/angeloluciosilvino/30min?hide_landing_page_details=1&hide_gdpr_banner=1&background_color=2c3e50&text_color=ffffff&primary_color=e2a745" style="min-width:320px;height:630px;"></div>
+                    <!-- Calendly inline widget end -->
                 </div>
             </div>
 
@@ -587,5 +602,89 @@
         </div>
     </footer>
 
+    <!-- Script JavaScript per Gestione Modale Blog e Menu Mobile -->
+    <script>
+        // Gestione Menu Mobile
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if(mobileBtn && mobileMenu) {
+            mobileBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // Dati degli articoli del blog per i modal
+        const blogData = {
+            'blog-1': {
+                category: 'Ansia & Benessere',
+                title: "Come riconoscere e accogliere l'ansia quotidiana",
+                readTime: 'Lettura: 4 min',
+                content: `
+                    <p class="text-xs font-semibold text-brand-sage uppercase tracking-wider mb-1">Ansia &amp; Benessere</p>
+                    <h3 class="font-serif text-2xl font-bold text-brand-dark mb-4">Come riconoscere e accogliere l'ansia quotidiana</h3>
+                    <p class="text-xs text-brand-muted mb-4"><i class="fa-regular fa-clock mr-1"></i> Tempo di lettura: 4 minuti</p>
+                    <div class="space-y-3 text-sm text-brand-muted leading-relaxed">
+                        <p>Spesso percepiamo l'ansia come un nemico da combattere a tutti i costi. Tuttavia, dal punto di vista psicologico, l'ansia è un campanello d'allarme evolutivo: un segnale che ci avvisa di un pericolo percepito o di un sovraccarico emotivo.</p>
+                        <p>Imparare a non respingerla, ma ad ascoltarla, rappresenta il primo vero passo verso la guarigione. Quando avverti il battito accelerato o la mente che corre, prova a fermarti, a respirare profondamente e a chiederti: <em>"Cosa sta cercando di dirmi questa emozione in questo momento?"</em></p>
+                        <p>Attraverso percorsi mirati di supporto psicologico online, è possibile apprendere tecniche efficaci di regolazione emotiva e mindfulness per ristabilire la calma nella vita di tutti i giorni.</p>
+                    </div>
+                `
+            },
+            'blog-2': {
+                category: 'Tecnologia & Mente',
+                title: "Realtà Virtuale e Psicologia: come funziona l'immersione",
+                readTime: 'Lettura: 5 min',
+                content: `
+                    <p class="text-xs font-semibold text-brand-sage uppercase tracking-wider mb-1">Tecnologia &amp; Mente</p>
+                    <h3 class="font-serif text-2xl font-bold text-brand-dark mb-4">Realtà Virtuale e Psicologia: come funziona l'immersione</h3>
+                    <p class="text-xs text-brand-muted mb-4"><i class="fa-regular fa-clock mr-1"></i> Tempo di lettura: 5 minuti</p>
+                    <div class="space-y-3 text-sm text-brand-muted leading-relaxed">
+                        <p>L'integrazione tra psicologia e tecnologie immersive come la Realtà Virtuale (VR) sta aprendo frontiere straordinarie nel trattamento clinico.</p>
+                        <p>Grazie a visori avanzati e ambienti digitali controllati, lo psicologo può accompagnare il paziente in percorsi di esposizione graduale o di rilassamento profondo in un contesto protetto, sicuro e altamente personalizzabile.</p>
+                        <p>Questa metodologia potenzia i risultati dei colloqui tradizionali, aiutando la mente a rielaborare ricordi, spazi ed emozioni in modo concreto e misurabile.</p>
+                    </div>
+                `
+            },
+            'blog-3': {
+                category: 'Crescita Personale',
+                title: "L'importanza dei confini sani nelle relazioni",
+                readTime: 'Lettura: 4 min',
+                content: `
+                    <p class="text-xs font-semibold text-brand-sage uppercase tracking-wider mb-1">Crescita Personale</p>
+                    <h3 class="font-serif text-2xl font-bold text-brand-dark mb-4">L'importanza dei confini sani nelle relazioni</h3>
+                    <p class="text-xs text-brand-muted mb-4"><i class="fa-regular fa-clock mr-1"></i> Tempo di lettura: 4 minuti</p>
+                    <div class="space-y-3 text-sm text-brand-muted leading-relaxed">
+                        <p>Stabilire confini sani non significa allontanare gli altri o erigere muri invalicabili, ma definire con chiarezza dove finiamo noi e dove cominciano gli altri.</p>
+                        <p>Molte difficoltà relazionali ed esaurimenti emotivi nascono dall'incapacità di dire "no" o dal timore di deludere le aspettative altrui. Imparare l'assertività è un pilastro fondamentale per la propria autostima.</p>
+                        <p>Un percorso psicologico offre lo spazio sicuro necessario per esplorare i propri bisogni e ristabilire il giusto equilibrio nelle relazioni interpersonali e professionali.</p>
+                    </div>
+                `
+            }
+        };
+
+        function openModal(articleId) {
+            const modal = document.getElementById('blog-modal');
+            const content = document.getElementById('modal-content');
+            if(blogData[articleId]) {
+                content.innerHTML = blogData[articleId].content;
+                modal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('blog-modal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Chiusura modale cliccando fuori dal box
+        window.addEventListener('click', (e) => {
+            const modal = document.getElementById('blog-modal');
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+    </script>
 </body>
 </html>
