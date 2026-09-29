@@ -544,7 +544,7 @@
         </div>
     </section>
 
-    <!-- Footer / Sezione Contatti con Calendario Chiaro & Contatore Visite -->
+    <!-- Footer / Sezione Contatti con Calendario Chiaro e Analytics a norma -->
     <footer id="contatti" class="bg-brand-dark text-white py-16 border-t border-brand-sage/25">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-12">
@@ -591,18 +591,12 @@
                 </div>
             </div>
 
-            <!-- Riga inferiore con Copyright, Analytics e Contatore Visite Visibile -->
+            <!-- Riga inferiore con Copyright e Analytics attivo -->
             <div class="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-400 gap-4">
                 <p>&copy; 2026 Dott. Angelo Lucio Silvino. Tutti i diritti riservati. Ordine degli Psicologi.</p>
-                <div class="flex flex-wrap items-center gap-3">
-                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-softwhite/10 border border-white/10 text-gray-200">
-                        <i class="fa-solid fa-chart-line text-brand-honey"></i>
-                        <span>Analytics attivo (ID: G-H98VB2D4CS)</span>
-                    </div>
-                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-softwhite/10 border border-white/10 text-gray-200">
-                        <i class="fa-solid fa-eye text-brand-honey"></i>
-                        <span>Visualizzazioni: <strong id="visitor-count" class="text-white">1.284</strong></span>
-                    </div>
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-softwhite/10 border border-white/10 text-gray-200">
+                    <i class="fa-solid fa-chart-line text-brand-honey"></i>
+                    <span>Analytics attivo (ID: G-H98VB2D4CS)</span>
                 </div>
             </div>
         </div>
@@ -618,21 +612,6 @@
                 mobileMenu.classList.toggle('hidden');
             });
         }
-
-        // Simula e incrementa il contatore delle visualizzazioni visibile a schermo
-        window.addEventListener('DOMContentLoaded', () => {
-            let views = localStorage.getItem('site_views');
-            if (!views) {
-                views = 1284; // Valore iniziale di partenza
-            } else {
-                views = parseInt(views) + 1;
-            }
-            localStorage.setItem('site_views', views);
-            const counterEl = document.getElementById('visitor-count');
-            if(counterEl) {
-                counterEl.textContent = views.toLocaleString('it-IT');
-            }
-        });
 
         // Dati degli articoli del blog per i modal
         const blogData = {
